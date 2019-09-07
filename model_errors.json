@@ -1,0 +1,122 @@
+[
+    {
+        "text": "greetings",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "thankyou",
+            "confidence": 0.4538480806235871
+        }
+    },
+    {
+        "text": "salutations",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "thankyou",
+            "confidence": 0.4538480806235871
+        }
+    },
+    {
+        "text": "what's up",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.33754388555834086
+        }
+    },
+    {
+        "text": "good to see you",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.26562033219926634
+        }
+    },
+    {
+        "text": "long time no see",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.3174024515691371
+        }
+    },
+    {
+        "text": "how do you do",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.6947155318123337
+        }
+    },
+    {
+        "text": "how have you been",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5444939505765036
+        }
+    },
+    {
+        "text": "yo",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.38069058253703314
+        }
+    },
+    {
+        "text": "pleasure to meet you",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "travel",
+            "confidence": 0.3970635142520535
+        }
+    },
+    {
+        "text": "g'day",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "travel",
+            "confidence": 0.4456319610599197
+        }
+    },
+    {
+        "text": "how is it going",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5581139667074168
+        }
+    },
+    {
+        "text": "how are you",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5366836886675658
+        }
+    },
+    {
+        "text": "how is everything",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5960938761822976
+        }
+    },
+    {
+        "text": "how are things",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5455137370634604
+        }
+    },
+    {
+        "text": "pleasure",
+        "intent": "thankyou",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.2875344955821086
+        }
+    }
+]

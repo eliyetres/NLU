@@ -60,6 +60,7 @@ One problem with this could be that if the user says something that doesn't real
 
 ### a) Evaluate your trained model with the training data as test data. Report the result (precision, recall, F1) and describe what the confusion matrix looks like.
 
+#### Results
 ```console
 2019-09-07 15:25:02 INFO     rasa_nlu.training_data.training_data  - Training data stats:
         - intent examples: 22 (3 distinct intents)
@@ -86,7 +87,7 @@ restaurant_search       1.00      1.00      1.00        12
 2019-09-07 15:25:02 INFO     __main__  - Your model made no errors
 ```
 
-It wasn't possible to show the confusion matrix, the code gave pyploy errors 
+It wasn't possible to show the confusion matrix, the code gave pyploy errors.
 
 ### b) Try to say something about the usefulness and relevance of what was done in the previous step. How useful is it to test a model with the same data that it’s been trained on?
 
@@ -94,15 +95,113 @@ When the model trains it makes a generilization of the data that is later used t
 
 ### c) Create a separate data file for test data, containing at least three examples per intent, where the examples differ between training and test set. (In other words, you need to come up with your own examples.) Evaluate the model with the test data. Report the result and include your test data.
 
+The model predicted the utterances "how is everything" and "how are things" falsely as restaurant searches.
 
+#### Results
+```console
+2019-09-07 16:25:29 INFO     rasa_nlu.training_data.training_data  - Training data stats:
+        - intent examples: 31 (3 distinct intents)
+        - Found intents: 'restaurant_search', 'greet', 'thankyou'
+        - entity examples: 9 (2 distinct entities)
+        - found entities: 'location', 'cuisine'
+
+2019-09-07 16:25:30 INFO     __main__  - Intent evaluation results:
+2019-09-07 16:25:30 INFO     __main__  - Intent Evaluation: Only considering those 31 examples that have a defined intent out of 31 examples
+2019-09-07 16:25:30 INFO     __main__  - F1-Score:  0.9334677419354839
+2019-09-07 16:25:30 INFO     __main__  - Precision: 0.9430740037950663
+2019-09-07 16:25:30 INFO     __main__  - Accuracy:  0.9354838709677419
+2019-09-07 16:25:30 INFO     __main__  - Classification report:
+                   precision    recall  f1-score   support
+
+            greet       1.00      0.78      0.88         9
+restaurant_search       0.88      1.00      0.94        15
+         thankyou       1.00      1.00      1.00         7
+
+        micro avg       0.94      0.94      0.94        31
+        macro avg       0.96      0.93      0.94        31
+     weighted avg       0.94      0.94      0.93        31
+
+2019-09-07 16:25:30 INFO     __main__  - Model prediction errors saved to errors.json.
+
+```
+
+#### Errors
+```json
+[
+    {
+        "text": "how is everything",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.5607080096703879
+        }
+    },
+    {
+        "text": "how are things",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.552662688499982
+        }
+    }
+]
+```
 
 ## Task 4: Improve NLU performance
 
-In task 2, and perhaps also task 3, some shortcomings of the model were hopefully discovered.
+In task 2, and perhaps also task 3, some shortcomings of the model were hopefully discovered. Adress  shortcomings of the model in task 2 and 3 by modifying or extending the training data. (E.g. you can add examples or insert new intents.) Try to validate the improvements by measuring performance as in task 3. Report the shortcomings, describe how you tried to address them, and how it went.
 
-Adress  shortcomings of the model in task 2 and 3 by modifying or extending the training data. (E.g. you can add examples or insert new intents.)
+#### Results
+```console
+2019-09-07 18:02:55 INFO     __main__  - F1-Score:  0.9307312094773073
+2019-09-07 18:02:55 INFO     __main__  - Precision: 0.969758064516129
+2019-09-07 18:02:55 INFO     __main__  - Accuracy:  0.9032258064516129
+2019-09-07 18:02:55 INFO     __main__  - Classification report:
+                   precision    recall  f1-score   support
 
-Try to validate the improvements by measuring performance as in task 3. Report the shortcomings, describe how you tried to address them, and how it went.
+            greet       1.00      0.78      0.88         9
+restaurant_search       0.94      1.00      0.97        15
+          support       0.00      0.00      0.00         0
+         thankyou       1.00      0.86      0.92         7
+
+        micro avg       0.90      0.90      0.90        31
+        macro avg       0.73      0.66      0.69        31
+     weighted avg       0.97      0.90      0.93        31
+
+2019-09-07 18:02:55 INFO     __main__  - Model prediction errors saved to errors.json.
+```
+#### Errors
+```json
+[
+    {
+        "text": "how is everything",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.6362642449335749
+        }
+    },
+    {
+        "text": "how are things",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5834349219267222
+        }
+    },
+    {
+        "text": "pleasure",
+        "intent": "thankyou",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.28522247388157473
+        }
+    }
+]
+
+```
+
+For this test I added the labels 
 
 ## Task 5: Analyze a specific problem
 
