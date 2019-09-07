@@ -158,7 +158,7 @@ restaurant_search       0.88      1.00      0.94        15
 
 ## Task 4: Improve NLU performance
 
-In task 2, and perhaps also task 3, some shortcomings of the model were hopefully discovered. Adress  shortcomings of the model in task 2 and 3 by modifying or extending the training data. (E.g. you can add examples or insert new intents.) Try to validate the improvements by measuring performance as in task 3. Report the shortcomings, describe how you tried to address them, and how it went.
+### In task 2, and perhaps also task 3, some shortcomings of the model were hopefully discovered. Adress  shortcomings of the model in task 2 and 3 by modifying or extending the training data. (E.g. you can add examples or insert new intents.) Try to validate the improvements by measuring performance as in task 3. Report the shortcomings, describe how you tried to address them, and how it went.
 
 For this test I added the labels travel and support. The training data and the test data included different utterances.
 The errors were mosly for greetings, many of them were different from anything in the training data. The model correctly predicted the restaurant searches and the travel utterances. They all had "keywords" like cities or technology. 
@@ -315,7 +315,7 @@ restaurant_search       0.70      1.00      0.82         7
 
 ## Task 5: Analyze a specific problem
 
-Compare the intent classification results for ”good bye” vs ”bye good” and report your findings. You may agree with me that there’s some kind of problem here… (If not, feel free to discuss this in the report.) Try to find the cause of the problem. (You may want to look at the lecture slides and/or the source code for Rasa NLU.) How could one go about to address the problem? You don’t need to solve it here and now, but try to find one or more directions one could take, and briefly discuss it/them. 
+## Compare the intent classification results for ”good bye” vs ”bye good” and report your findings. You may agree with me that there’s some kind of problem here… (If not, feel free to discuss this in the report.) Try to find the cause of the problem. (You may want to look at the lecture slides and/or the source code for Rasa NLU.) How could one go about to address the problem? You don’t need to solve it here and now, but try to find one or more directions one could take, and briefly discuss it/them. 
 
 
 The utterances gives the exact same confidence level, there is no difference in how the model evaluates them. This shows that the model only trains word by word, and is not interpreting the utterance "good bye" as one entity. This is  a problem because "bye good" is obviously not the same thing as "good bye". "Good bye" should be evaluated as one entity, and since it's already in the training data, the utterance should have a higher confidence level than "bye good". The full utterances present in the training data should be treated as a larger entity (or something like trigrams) and produce a higher confidence level, but single words should also be evaluated separatley, so that "bye good" still gives a higher confidence for the label that they exists in, but lower than an exact match.
