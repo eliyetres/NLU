@@ -33,22 +33,31 @@ The NLU result for the utterance "hello there" and include the whole output in t
 
 ### a) Find and report at least 3 utterances whose intent is correctly classified despite not being in the training data.
 good day: a greet with a confidence 0.60
+
 howdy: a greet with a confidence of 0.86
+
 hiya: a greeting with a confidence of 0.89
 
 ### b) Find and report at least 3 utterances whose intent is incorrectly classified despite expressing the respective intent.
-greetings: a thankyou with a confidence  0.54 
+greetings: a thankyou with a confidence  0.54
+
 what's up: restaurant_search with a confidence of 0.63 and a greenting of only  0.19
+
 long time no see: restaurant_search with a confidence of 0.59 and greeting of only 0.2
+
 
 ### c) Explore how intent classification behaves when utterances expressing other intents than in the training data are parsed, e.g. an intent from a travel agency or tech support domain. Report your findings.
 
 Trying different utterances with the intent of travel, they all showed a very high confidence in restaurant_search. All utterances had a confidence level of  somewhere between 0.80-0.85. The last sentence  includes the words "i want", which is in the training data, but this is the also the utterance that got the lowest confidence of being a restaurant search of them all (0.80).
 
 "i would like to travel from gothenburg to london"
+
 "book a flight to marrakesh tomorrow"
+
 "book a train to copenhagen leaving tomorrow"
+
 "i want to go to oslo tomorrow by bus"
+
 
 ### d) Look at the confidence scores for a classification result. What is their sum? Try with at least two different classifications. Can you see any problem with the sum of the scores, in the context of dialogue systems?
 
@@ -308,3 +317,53 @@ restaurant_search       0.70      1.00      0.82         7
 
 Compare the intent classification results for ”good bye” vs ”bye good” and report your findings. You may agree with me that there’s some kind of problem here… (If not, feel free to discuss this in the report.) Try to find the cause of the problem. (You may want to look at the lecture slides and/or the source code for Rasa NLU.) How could one go about to address the problem? You don’t need to solve it here and now, but try to find one or more directions one could take, and briefly discuss it/them. 
 
+
+The utterances gives the exact same confidence level, there is no difference in how the model evaluates them. This shows that the model only trains word by word, and is not interpreting the utterance "good bye" as one entity. This is  a problem because "bye good" is obviously not the same thing as "good bye". "Good bye" should be evaluated as one entity, and since it's already in the training data, the utterance should have a higher confidence level than "bye good". The full utterances present in the training data should be treated as a larger entity (or something like trigrams) and produce a higher confidence level, but single words should also be evaluated separatley, so that "bye good" still gives a higher confidence for the label that they exists in, but lower than an exact match.
+
+```json
+{
+  "intent": {
+    "name": "bye",
+    "confidence": 0.509759085168469
+  },
+  "entities": [],
+  "intent_ranking": [
+    {
+      "name": "bye",
+      "confidence": 0.509759085168469
+    },
+    {
+      "name": "greet",
+      "confidence": 0.28607156518620896
+    },
+    {
+      "name": "thankyou",
+      "confidence": 0.20416934964532185
+    }
+  ],
+  "text": "bye good"
+}
+{
+  "intent": {
+    "name": "bye",
+    "confidence": 0.509759085168469
+  },
+  "entities": [],
+  "intent_ranking": [
+    {
+      "name": "bye",
+      "confidence": 0.509759085168469
+    },
+    {
+      "name": "greet",
+      "confidence": 0.28607156518620896
+    },
+    {
+      "name": "thankyou",
+      "confidence": 0.20416934964532185
+    }
+  ],
+  "text": "good bye"
+}
+
+```
