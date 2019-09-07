@@ -1,0 +1,490 @@
+[
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.9258355993988664
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.9258355993988664
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.05745093327681548
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.016713467324318356
+      }
+    ],
+    "text": "hey"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.8555522860963903
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.8555522860963903
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07842276633230112
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.06602494757130864
+      }
+    ],
+    "text": "hello"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.8813768945647559
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.8813768945647559
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07876975298011404
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.03985335245513006
+      }
+    ],
+    "text": "hi"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.8598900957110773
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.8598900957110773
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.07624162865141933
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06386827563750318
+      }
+    ],
+    "text": "good morning"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.8609003143508547
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.8609003143508547
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.07648718283999206
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06261250280915337
+      }
+    ],
+    "text": "good evening"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.8552832738349248
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.8552832738349248
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07267060479232612
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.07204612137274914
+      }
+    ],
+    "text": "hey there"
+  }
+]
+[
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8602103496484718
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8602103496484718
+      },
+      {
+        "name": "greet",
+        "confidence": 0.07782932632184889
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06196032402967951
+      }
+    ],
+    "text": "i'm looking for a place to eat"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8687224052021011
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8687224052021011
+      },
+      {
+        "name": "greet",
+        "confidence": 0.0790181137049802
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.05225948109291837
+      }
+    ],
+    "text": "I want to grab lunch"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8669074372140034
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8669074372140034
+      },
+      {
+        "name": "greet",
+        "confidence": 0.0788987293658873
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.05419383342010923
+      }
+    ],
+    "text": "I am searching for a dinner spot"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8532451702995804
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8532451702995804
+      },
+      {
+        "name": "greet",
+        "confidence": 0.079473122256545
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06728170744387453
+      }
+    ],
+    "text": "i'm looking for a place in the [north](location) of town"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.820335133306796
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.820335133306796
+      },
+      {
+        "name": "greet",
+        "confidence": 0.09969303830697593
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07997182838622827
+      }
+    ],
+    "text": "show me [chinese](cuisine) restaurants"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8296480151829484
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8296480151829484
+      },
+      {
+        "name": "greet",
+        "confidence": 0.09068956734411134
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07966241747294035
+      }
+    ],
+    "text": "show me a [mexican(cuisine) place in the [centre](location)"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8381721137115665
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8381721137115665
+      },
+      {
+        "name": "greet",
+        "confidence": 0.08630584618402624
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07552204010440708
+      }
+    ],
+    "text": "i am looking for an [indian](cuisine) spot"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.9401114367060568
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.9401114367060568
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.043109006385825134
+      },
+      {
+        "name": "greet",
+        "confidence": 0.01677955690811824
+      }
+    ],
+    "text": "search for restaurants"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8719246491393219
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8719246491393219
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06588342163314652
+      },
+      {
+        "name": "greet",
+        "confidence": 0.06219192922753172
+      }
+    ],
+    "text": "anywhere in the [west](location)"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.877281963833365
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.877281963833365
+      },
+      {
+        "name": "greet",
+        "confidence": 0.06308522874192685
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.059632807424708154
+      }
+    ],
+    "text": "anywhere near [18328](location)"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.857670152368294
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.857670152368294
+      },
+      {
+        "name": "greet",
+        "confidence": 0.07902245679675174
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06330739083495432
+      }
+    ],
+    "text": "I am looking for [asian fusion](cuisine) food"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.883807939138504
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.883807939138504
+      },
+      {
+        "name": "greet",
+        "confidence": 0.06590086600931552
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.050291194852180324
+      }
+    ],
+    "text": "I am looking a restaurant in [29432](location)"
+  }
+]
+[
+  {
+    "intent": {
+      "name": "thankyou",
+      "confidence": 0.926451583067059
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "thankyou",
+        "confidence": 0.926451583067059
+      },
+      {
+        "name": "greet",
+        "confidence": 0.03988259063266651
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.03366582630027441
+      }
+    ],
+    "text": "thanks!"
+  },
+  {
+    "intent": {
+      "name": "thankyou",
+      "confidence": 0.8962802838047341
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "thankyou",
+        "confidence": 0.8962802838047341
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.059452647246910496
+      },
+      {
+        "name": "greet",
+        "confidence": 0.04426706894835529
+      }
+    ],
+    "text": "thank you"
+  },
+  {
+    "intent": {
+      "name": "thankyou",
+      "confidence": 0.9409893360290735
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "thankyou",
+        "confidence": 0.9409893360290735
+      },
+      {
+        "name": "greet",
+        "confidence": 0.03886770702511754
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.020142956945809046
+      }
+    ],
+    "text": "thx"
+  },
+  {
+    "intent": {
+      "name": "thankyou",
+      "confidence": 0.9095606336696053
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "thankyou",
+        "confidence": 0.9095606336696053
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.046688355422776495
+      },
+      {
+        "name": "greet",
+        "confidence": 0.04375101090761801
+      }
+    ],
+    "text": "thanks very much"
+  }
+]
