@@ -1,0 +1,244 @@
+[
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.7700637180687561
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.7700637180687561
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.14459522386640253
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.08534105806484113
+      }
+    ],
+    "text": "hello there"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.8813768945647559
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.8813768945647559
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07876975298011404
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.03985335245513006
+      }
+    ],
+    "text": "hi"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.9258355993988664
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.9258355993988664
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.05745093327681548
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.016713467324318356
+      }
+    ],
+    "text": "hey"
+  },
+  {
+    "intent": {
+      "name": "thankyou",
+      "confidence": 0.5395622727863306
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "thankyou",
+        "confidence": 0.5395622727863306
+      },
+      {
+        "name": "greet",
+        "confidence": 0.360106467364485
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.1003312598491842
+      }
+    ],
+    "text": "greetings"
+  },
+  {
+    "intent": {
+      "name": "thankyou",
+      "confidence": 0.5395622727863306
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "thankyou",
+        "confidence": 0.5395622727863306
+      },
+      {
+        "name": "greet",
+        "confidence": 0.360106467364485
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.1003312598491842
+      }
+    ],
+    "text": "salutations"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.8598900957110773
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.8598900957110773
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.07624162865141933
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06386827563750318
+      }
+    ],
+    "text": "good morning"
+  },
+  {
+    "intent": {
+      "name": "greet",
+      "confidence": 0.6064148473848274
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "greet",
+        "confidence": 0.6064148473848274
+      },
+      {
+        "name": "restaurant_search",
+        "confidence": 0.21627142771711996
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.17731372489805264
+      }
+    ],
+    "text": "good day"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.6344527130566043
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.6344527130566043
+      },
+      {
+        "name": "greet",
+        "confidence": 0.19117417413849175
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.17437311280490417
+      }
+    ],
+    "text": "what's up"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.5645079739683
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.5645079739683
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.29226634983267047
+      },
+      {
+        "name": "greet",
+        "confidence": 0.14322567619902923
+      }
+    ],
+    "text": "good to see you"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.5858842401381127
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.5858842401381127
+      },
+      {
+        "name": "greet",
+        "confidence": 0.24692680131940917
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.16718895854247842
+      }
+    ],
+    "text": "Long time no see"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.5444097146698206
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.5444097146698206
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.30646069894683037
+      },
+      {
+        "name": "greet",
+        "confidence": 0.14912958638334886
+      }
+    ],
+    "text": "how do you do"
+  }
+]

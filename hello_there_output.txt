@@ -1,0 +1,22 @@
+{
+  "intent": {
+    "name": "greet",
+    "confidence": 0.7700637180687561
+  },
+  "entities": [],
+  "intent_ranking": [
+    {
+      "name": "greet",
+      "confidence": 0.7700637180687561
+    },
+    {
+      "name": "restaurant_search",
+      "confidence": 0.14459522386640253
+    },
+    {
+      "name": "thankyou",
+      "confidence": 0.08534105806484113
+    }
+  ],
+  "text": "hello there"
+}

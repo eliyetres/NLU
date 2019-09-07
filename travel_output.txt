@@ -1,0 +1,90 @@
+[
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8509672497634393
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8509672497634393
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07532238764259602
+      },
+      {
+        "name": "greet",
+        "confidence": 0.07371036259396463
+      }
+    ],
+    "text": "i would like to travel from gothenburg to london"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.826411881475066
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.826411881475066
+      },
+      {
+        "name": "greet",
+        "confidence": 0.10872221596876774
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.06486590255616635
+      }
+    ],
+    "text": "book a flight to marrakesh tomorrow"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.813174430405778
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.813174430405778
+      },
+      {
+        "name": "greet",
+        "confidence": 0.11222617019022911
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.0745993994039928
+      }
+    ],
+    "text": "book a train to copenhagen leaving tomorrow"
+  },
+  {
+    "intent": {
+      "name": "restaurant_search",
+      "confidence": 0.8080591999757607
+    },
+    "entities": [],
+    "intent_ranking": [
+      {
+        "name": "restaurant_search",
+        "confidence": 0.8080591999757607
+      },
+      {
+        "name": "greet",
+        "confidence": 0.11595120885187996
+      },
+      {
+        "name": "thankyou",
+        "confidence": 0.07598959117235926
+      }
+    ],
+    "text": "i want to go to oslo tomorrow by bus"
+  }
+]
