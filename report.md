@@ -151,34 +151,135 @@ restaurant_search       0.88      1.00      0.94        15
 
 In task 2, and perhaps also task 3, some shortcomings of the model were hopefully discovered. Adress  shortcomings of the model in task 2 and 3 by modifying or extending the training data. (E.g. you can add examples or insert new intents.) Try to validate the improvements by measuring performance as in task 3. Report the shortcomings, describe how you tried to address them, and how it went.
 
+For this test I added the labels travel and support. The training data and the test data included different utterances.
+The errors were mosly for greetings, many of them were different from anything in the training data. The model correctly predicted the restaurant searches and the travel utterances. They all had "keywords" like cities or technology. 
+
 #### Results
 ```console
-2019-09-07 18:02:55 INFO     __main__  - F1-Score:  0.9307312094773073
-2019-09-07 18:02:55 INFO     __main__  - Precision: 0.969758064516129
-2019-09-07 18:02:55 INFO     __main__  - Accuracy:  0.9032258064516129
-2019-09-07 18:02:55 INFO     __main__  - Classification report:
+2019-09-07 18:15:17 INFO     __main__  - F1-Score:  0.5670048905343023
+2019-09-07 18:15:17 INFO     __main__  - Precision: 0.7984126984126984
+2019-09-07 18:15:17 INFO     __main__  - Accuracy:  0.6153846153846154
+2019-09-07 18:15:17 INFO     __main__  - Classification report:
                    precision    recall  f1-score   support
 
-            greet       1.00      0.78      0.88         9
-restaurant_search       0.94      1.00      0.97        15
-          support       0.00      0.00      0.00         0
-         thankyou       1.00      0.86      0.92         7
+            greet       1.00      0.22      0.36        18
+restaurant_search       0.70      1.00      0.82         7
+          support       0.33      1.00      0.50         4
+         thankyou       0.67      0.80      0.73         5
+           travel       0.71      1.00      0.83         5
 
-        micro avg       0.90      0.90      0.90        31
-        macro avg       0.73      0.66      0.69        31
-     weighted avg       0.97      0.90      0.93        31
+        micro avg       0.62      0.62      0.62        39
+        macro avg       0.68      0.80      0.65        39
+     weighted avg       0.80      0.62      0.57        39
 
-2019-09-07 18:02:55 INFO     __main__  - Model prediction errors saved to errors.json.
+2019-09-07 18:15:17 INFO     __main__  - Model prediction errors saved to errors.json.
+
 ```
 #### Errors
 ```json
 [
     {
+        "text": "greetings",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "thankyou",
+            "confidence": 0.4538480806235871
+        }
+    },
+    {
+        "text": "salutations",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "thankyou",
+            "confidence": 0.4538480806235871
+        }
+    },
+    {
+        "text": "what's up",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.33754388555834086
+        }
+    },
+    {
+        "text": "good to see you",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.26562033219926634
+        }
+    },
+    {
+        "text": "long time no see",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.3174024515691371
+        }
+    },
+    {
+        "text": "how do you do",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.6947155318123337
+        }
+    },
+    {
+        "text": "how have you been",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5444939505765036
+        }
+    },
+    {
+        "text": "yo",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "restaurant_search",
+            "confidence": 0.38069058253703314
+        }
+    },
+    {
+        "text": "pleasure to meet you",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "travel",
+            "confidence": 0.3970635142520535
+        }
+    },
+    {
+        "text": "g'day",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "travel",
+            "confidence": 0.4456319610599197
+        }
+    },
+    {
+        "text": "how is it going",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5581139667074168
+        }
+    },
+    {
+        "text": "how are you",
+        "intent": "greet",
+        "intent_prediction": {
+            "name": "support",
+            "confidence": 0.5366836886675658
+        }
+    },
+    {
         "text": "how is everything",
         "intent": "greet",
         "intent_prediction": {
             "name": "support",
-            "confidence": 0.6362642449335749
+            "confidence": 0.5960938761822976
         }
     },
     {
@@ -186,7 +287,7 @@ restaurant_search       0.94      1.00      0.97        15
         "intent": "greet",
         "intent_prediction": {
             "name": "support",
-            "confidence": 0.5834349219267222
+            "confidence": 0.5455137370634604
         }
     },
     {
@@ -194,23 +295,16 @@ restaurant_search       0.94      1.00      0.97        15
         "intent": "thankyou",
         "intent_prediction": {
             "name": "restaurant_search",
-            "confidence": 0.28522247388157473
+            "confidence": 0.2875344955821086
         }
     }
 ]
 
 ```
 
-For this test I added the labels 
+
 
 ## Task 5: Analyze a specific problem
 
-Compare the intent classification results for ”good bye” vs ”bye good” and report your findings. You may agree with me that there’s some kind of problem here… (If not, feel free to discuss this in the report.)
+Compare the intent classification results for ”good bye” vs ”bye good” and report your findings. You may agree with me that there’s some kind of problem here… (If not, feel free to discuss this in the report.) Try to find the cause of the problem. (You may want to look at the lecture slides and/or the source code for Rasa NLU.) How could one go about to address the problem? You don’t need to solve it here and now, but try to find one or more directions one could take, and briefly discuss it/them. 
 
-Try to find the cause of the problem. (You may want to look at the lecture slides and/or the source code for Rasa NLU.)
-
-How could one go about to address the problem? You don’t need to solve it here and now, but try to find one or more directions one could take, and briefly discuss it/them.
-
- 
-
-Your submission for this lab should include a report where you include the results of the tasks (output) and your discussion around them when applicable. Additionally, you should include your train and test data.
