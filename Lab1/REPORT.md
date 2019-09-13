@@ -32,23 +32,23 @@ The NLU result for the utterance "hello there" and include the whole output in t
 ```
 
 ### a) Find and report at least 3 utterances whose intent is correctly classified despite not being in the training data.
-good day: a greet with a confidence 0.60
+good day: Classified as greet with a confidence 0.60.
 
-howdy: a greet with a confidence of 0.86
+howdy: Classified as greet with a confidence of 0.86.
 
-hiya: a greeting with a confidence of 0.89
+hiya: Classified as greet with a confidence of 0.89.
 
 ### b) Find and report at least 3 utterances whose intent is incorrectly classified despite expressing the respective intent.
-greetings: a thankyou with a confidence  0.54
+greetings: Classified as thankyou with a confidence of 0.54.
 
-what's up: restaurant_search with a confidence of 0.63 and a greenting of only  0.19
+what's up: Classified as restaurant_search with a confidence of 0.63. The confidence for a greenting was only  0.19.
 
-long time no see: restaurant_search with a confidence of 0.59 and greeting of only 0.2
+long time no see: restaurant_search with a confidence of 0.59 and greeting of 0.25.
 
 
 ### c) Explore how intent classification behaves when utterances expressing other intents than in the training data are parsed, e.g. an intent from a travel agency or tech support domain. Report your findings.
 
-Trying different utterances with the intent of travel, they all showed a very high confidence in restaurant_search. All utterances had a confidence level of  somewhere between 0.80-0.85. The last sentence  includes the words "i want", which is in the training data, but this is the also the utterance that got the lowest confidence of being a restaurant search of them all (0.80).
+Trying different utterances with the intent of travel, they all showed a very high confidence in restaurant_search. All utterances had a confidence level of somewhere between 0.80-0.85. The last sentence includes the words "i want", which is in the training data, but this is the also the utterance that got the lowest confidence of being a restaurant search of them all (0.80).
 
 "i would like to travel from gothenburg to london"
 
@@ -62,7 +62,7 @@ Trying different utterances with the intent of travel, they all showed a very hi
 ### d) Look at the confidence scores for a classification result. What is their sum? Try with at least two different classifications. Can you see any problem with the sum of the scores, in the context of dialogue systems?
 
 They always sum up to 1.
-One problem with this could be that if the user says something that doesn't really match anything in the training data, one of the categories will still have a very high confidence score.
+One problem with this could be that if the user says something that doesn't really match anything in the training data, one of the categories might still have a very high confidence score.
  
 
 ## Task 3: Measure NLU performance
@@ -161,7 +161,7 @@ restaurant_search       0.88      1.00      0.94        15
 ### In task 2, and perhaps also task 3, some shortcomings of the model were hopefully discovered. Adress  shortcomings of the model in task 2 and 3 by modifying or extending the training data. (E.g. you can add examples or insert new intents.) Try to validate the improvements by measuring performance as in task 3. Report the shortcomings, describe how you tried to address them, and how it went.
 
 For this test I added the labels travel and support. The training data and the test data included different utterances.
-The errors were mosly for greetings, many of them were different from anything in the training data. The model correctly predicted the restaurant searches and the travel utterances. They all had "keywords" like cities or technology. 
+The errors were mosly for greetings, many of them were different from anything in the training data. The model correctly predicted the restaurant searches and the travel utterances. A reason for this might be because they all had "keywords" like cities or technology that was present in the training data. 
 
 #### Results
 ```console
@@ -311,14 +311,12 @@ restaurant_search       0.70      1.00      0.82         7
 
 ```
 
-
-
 ## Task 5: Analyze a specific problem
 
 ## Compare the intent classification results for ”good bye” vs ”bye good” and report your findings. You may agree with me that there’s some kind of problem here… (If not, feel free to discuss this in the report.) Try to find the cause of the problem. (You may want to look at the lecture slides and/or the source code for Rasa NLU.) How could one go about to address the problem? You don’t need to solve it here and now, but try to find one or more directions one could take, and briefly discuss it/them. 
 
 
-The utterances gives the exact same confidence level, there is no difference in how the model evaluates them. This shows that the model only trains word by word, and is not interpreting the utterance "good bye" as one entity. This is  a problem because "bye good" is obviously not the same thing as "good bye". "Good bye" should be evaluated as one entity, and since it's already in the training data, the utterance should have a higher confidence level than "bye good". The full utterances present in the training data should be treated as a larger entity (or something like trigrams) and produce a higher confidence level, but single words should also be evaluated separatley, so that "bye good" still gives a higher confidence for the label that they exists in, but lower than an exact match.
+The utterances gives the exact same confidence level, there is no difference in how the model evaluates them. This shows that the model only trains word by word, and is not interpreting the utterance "good bye" as one entity. This is  a problem because "bye good" is obviously not the same thing as "good bye". "Good bye" should be evaluated as one entity, and since it's already in the training data, the utterance should have a higher confidence level than "bye good". The full utterances present in the training data should be treated as a larger entity (eg. bigram, trigram or just the full word combination) and produce a higher confidence level, but single words should also be evaluated separatley, so that "bye good" still gives a higher confidence for the label that they exists in, but lower than an exact match.
 
 ```json
 {
