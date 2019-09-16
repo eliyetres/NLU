@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="TimeDomain" is_super_domain="true">
+  <goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="alt_question">
+        <alt>
+          <resolve type="wh_question" predicate="current_time"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="current_alarm"/>
+        </alt>
+        <alt>
+          <perform action="set_time"/>
+        </alt>
+        <alt>
+          <perform action="set_alarm"/>
+        </alt>
+      </findout>
+    </plan>
+  </goal>
+
+  <goal type="perform" action="set_time">
+    <plan>
+      <findout type="wh_question" predicate="hour_to_set"/>
+      <findout type="wh_question" predicate="minute_to_set"/>
+      <dev_perform action="SetTime" postconfirm="true"/>
+    </plan>
+    <postcond>
+      <device_activity_terminated action="SetTime"/>
+    </postcond>
+  </goal>
+
+  <goal type="perform" action="set_alarm">
+    <plan>
+      <findout type="wh_question" predicate="selected_alarm_time"/>
+      <dev_perform action="SetAlarm" postconfirm="true"/>
+    </plan>
+    <postcond>
+      <device_activity_terminated action="SetAlarm"/>
+    </postcond>
+  </goal>
+
+  <parameters question_type="wh_question" predicate="selected_alarm_time" source="device"
+              incremental="true" sort_order="alphabetic" max_spoken_alts="3">
+  </parameters>
+  <!--This element indicates the there is a defined service query related to the predicate "selected_alarm_time". It potentially outputs possible answers to the system question related to that predicate "what time do you want to set your alarm to? If the query returns only one result, the system will accommodate it and not ask the user"-->
+
+  <goal type="resolve" question_type="wh_question" predicate="current_time">
+    <plan>
+      <dev_query predicate="current_time" type="wh_question"/>
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="current_alarm">
+    <plan>
+      <dev_query predicate="current_alarm" type="wh_question"/>
+    </plan>
+  </goal>
+</domain>

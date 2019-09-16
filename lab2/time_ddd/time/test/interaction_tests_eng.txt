@@ -1,0 +1,54 @@
+--- main menu
+S> Do you want to know the current time, know the current alarm, set the time or set the alarm?
+
+--- asking about time
+U> what time is it
+S> 00:00.
+
+--- setting the time (menu driven)
+U> set the time
+S> What hour?
+U> eleven
+S> What minute?
+U> ten
+S> The time was set to 11: 10.
+
+--- querying time after setting it
+U> set the time
+S> What hour?
+U> eleven
+S> What minute?
+U> ten
+S> The time was set to 11: 10.
+U>
+S> Returning to main menu. Do you want to know the current time, know the current alarm, set the time or set the alarm?
+U> what time is it
+S> 11:10.
+
+--- setting the time (one-shot)
+U> set the time to eleven ten
+S> The time was set to 11: 10.
+
+--- setting the time (over answering)
+U> set the time to seven
+S> What minute?
+
+--- setting the alarm (menu driven)
+U> set the alarm
+S> What time do you want to set your alarm to : 08:00, 08:30 or 09:00?
+U> eight
+S> The alarm was set to 08:00.
+
+--- setting the alarm (one-shot)
+U> set the alarm to eight
+S> The alarm was set to 08:00.
+
+--- querying the alarm after setting it
+U> set the alarm
+S> What time do you want to set your alarm to : 08:00, 08:30 or 09:00?
+U> eight thirty
+S> The alarm was set to 08:30.
+U>
+S> Returning to main menu. Do you want to know the current time, know the current alarm, set the time or set the alarm?
+U> what it the current alarm
+S> The alarm is 08:30.

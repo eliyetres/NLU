@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ontology name="TimeOntology">
+
+  <action name="set_time"/>
+  <action name="set_alarm"/>
+
+  <predicate name="current_time" sort="string"/>
+  <predicate name="hour_to_set" sort="integer"/>
+  <predicate name="minute_to_set" sort="integer"/>
+  <predicate name="current_alarm" sort="alarm_time"/>
+  <predicate name="selected_alarm_time" sort="alarm_time"/>
+
+  <sort name="alarm_time"/>
+
+  <individual name="eight" sort="alarm_time"/>
+  <individual name="eight_thirty" sort="alarm_time"/>
+  <individual name="nine" sort="alarm_time"/>
+  <individual name="alarm_off" sort="alarm_time"/>
+
+</ontology>

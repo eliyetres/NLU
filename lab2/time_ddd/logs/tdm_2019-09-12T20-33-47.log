@@ -1,0 +1,155 @@
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08:30', name=u'eight_thirty')
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8:30', name=u'eight_thirty')
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8 30', name=u'eight_thirty')
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08 30', name=u'eight_thirty')
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='eight thirty', name=u'eight_thirty')
+2019-09-12 20:33:47,618 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='09:00', name=u'nine')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='9:00', name=u'nine')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='09', name=u'nine')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='9', name=u'nine')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='nine', name=u'nine')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08:00', name=u'eight')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8:00', name=u'eight')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8', name=u'eight')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08', name=u'eight')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='eight', name=u'eight')
+2019-09-12 20:33:47,619 - tdm - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:33:47,620 - tdm - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='off', name=u'alarm_off')
+2019-09-12 20:33:47,620 - tdm - DEBUG - EntityDb(time): add_entity returns u'alarm_off'
+2019-09-12 20:33:47,620 - tdm - DEBUG - DddDb().__init__(name='ddds', default_ddds=[u'time'])
+2019-09-12 20:33:47,620 - tdm - DEBUG - DddDb(): DB file name is '/Users/marta/Desktop/Course project/time_ddd/ddds.json'
+2019-09-12 20:33:47,628 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session=None).open()
+2019-09-12 20:33:47,631 - tdm - DEBUG - thread_manager.create_thread() with threading.active_count()=3
+2019-09-12 20:33:47,631 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session=None).on_message({"handshake_content": {"session_id": null, "keep_session_alive": false}, "name": "Frontend"})
+2019-09-12 20:33:47,631 - tdm - DEBUG - thread_manager.create_thread() with threading.active_count()=4
+2019-09-12 20:33:47,631 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session=None)._register({"handshake_content": {"session_id": null, "keep_session_alive": false}, "name": "Frontend"})
+2019-09-12 20:33:47,632 - tdm - DEBUG - Creating backend and session with id 2019-09-12T20_33_47_0.
+2019-09-12 20:33:47,635 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": "2019-09-12T20_33_47_0", "_sender": null, "_reason": null, "event_type": "SESSION_ID"}
+2019-09-12 20:33:47,635 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:47,635 - tdm - DEBUG - FrontendConnectionHandler._register: Registered in session 2019-09-12T20_33_47_0 with backend <tdm.backend.Backend object at 0x1088ef490>.
+2019-09-12 20:33:47,635 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_message({"content": null, "_sender": "Frontend", "_reason": null, "event_type": "START"})
+2019-09-12 20:33:47,669 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(SET_DDD, {'ddd_name': 'time', 'language_code': 'eng'}, sender=DmeModule, reason=None))
+2019-09-12 20:33:47,670 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": {"ddd_name": "time", "language_code": "eng"}, "_sender": "DmeModule", "_reason": null, "event_type": "SET_DDD"}
+2019-09-12 20:33:47,670 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:47,670 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [], sender=DmeModule, reason=None))
+2019-09-12 20:33:47,670 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:47,670 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:47,670 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [], sender=DmeModule, reason=None))
+2019-09-12 20:33:47,670 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:47,671 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:47,671 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(END_SYSTEM_TURN, {'passivity_duration': None, 'system_has_asked_question': True}, sender=DmeModule, reason=None))
+2019-09-12 20:33:47,671 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": {"passivity_duration": null, "system_has_asked_question": true}, "_sender": "DmeModule", "_reason": null, "event_type": "END_SYSTEM_TURN"}
+2019-09-12 20:33:47,671 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:47,671 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(SYSTEM_UTTERANCE_TO_SPEAK, ['Do you want to know the current time, know the current alarm, set the time or set the alarm?'], sender=None, reason=None))
+2019-09-12 20:33:47,671 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": ["Do you want to know the current time, know the current alarm, set the time or set the alarm?"], "_sender": null, "_reason": null, "event_type": "SYSTEM_UTTERANCE_TO_SPEAK"}
+2019-09-12 20:33:47,671 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:47,672 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(MESSAGE_TO_GUI, [Screen(top, Main menu, [<tdm.nlg.tdm_gui_protocol.Element instance at 0x108878758>])], sender=None, reason=None))
+2019-09-12 20:33:47,672 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [{"Screen": {"elements": [{"Element": {"name": "move", "title": "", "items": [{"Item": {"attributes": null, "selected": false, "predicted": false, "value": "ask(?X.current_time(X))", "title": "The current time?"}}, {"Item": {"attributes": null, "selected": false, "predicted": false, "value": "ask(?X.current_alarm(X))", "title": "The current alarm?"}}, {"Item": {"attributes": null, "selected": false, "predicted": false, "value": "request(set_time)", "title": "Set the time"}}, {"Item": {"attributes": null, "selected": false, "predicted": false, "value": "request(set_alarm)", "title": "Set the alarm"}}], "format": "", "voice_browsed": false, "value": "", "template": "menu", "type": "list"}}], "name": "top", "title": "Main menu"}}], "_sender": null, "_reason": null, "event_type": "MESSAGE_TO_GUI"}
+2019-09-12 20:33:47,672 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:50,200 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_message({"content": [{"score": 1.0, "utterance": "set the alarm"}], "_sender": "TextInputComponent", "_reason": null, "event_type": "RECOGNITION"})
+2019-09-12 20:33:50,229 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), {}, eng)
+2019-09-12 20:33:50,229 - tdm - DEBUG - DeviceHandler invocation ID: bd78e5e217d48ad49fc0ccac741595a3
+2019-09-12 20:33:50,229 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), {}, eng)
+2019-09-12 20:33:50,229 - tdm - DEBUG - DeviceHandler invocation ID: 55659281e83449cdbb7e7be5928812b0
+2019-09-12 20:33:50,231 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), {}, eng)
+2019-09-12 20:33:50,231 - tdm - DEBUG - DeviceHandler invocation ID: bb00bb582c896e2dcca8d5558d704422
+2019-09-12 20:33:50,231 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), {}, eng)
+2019-09-12 20:33:50,231 - tdm - DEBUG - DeviceHandler invocation ID: 5bc9a219a50086e7072b20b9b6568c81
+2019-09-12 20:33:50,241 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), {}, eng)
+2019-09-12 20:33:50,241 - tdm - DEBUG - DeviceHandler invocation ID: 985cec03ffaa2fed21b67dd4d8050098
+2019-09-12 20:33:50,257 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), {}, eng)
+2019-09-12 20:33:50,257 - tdm - DEBUG - DeviceHandler invocation ID: d7b386b7c4b5bde2c56f4ac128ea7970
+2019-09-12 20:33:50,258 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), {}, eng)
+2019-09-12 20:33:50,258 - tdm - DEBUG - DeviceHandler invocation ID: 8b5d43217f751478e0a4afff0e2ecd59
+2019-09-12 20:33:50,268 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(SELECTED_RECOGNITION, 'set the alarm', sender=DmeModule, reason=None))
+2019-09-12 20:33:50,268 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": "set the alarm", "_sender": "DmeModule", "_reason": null, "event_type": "SELECTED_RECOGNITION"}
+2019-09-12 20:33:50,268 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:50,268 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [], sender=DmeModule, reason=None))
+2019-09-12 20:33:50,268 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:50,268 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:50,269 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [], sender=DmeModule, reason=None))
+2019-09-12 20:33:50,269 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:50,269 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:50,269 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(END_SYSTEM_TURN, {'passivity_duration': 5.0, 'system_has_asked_question': True}, sender=DmeModule, reason=None))
+2019-09-12 20:33:50,269 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": {"passivity_duration": 5.0, "system_has_asked_question": true}, "_sender": "DmeModule", "_reason": null, "event_type": "END_SYSTEM_TURN"}
+2019-09-12 20:33:50,270 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:50,270 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(EXPECTED_PASSIVITY_DURATION, 5.0, sender=DmeModule, reason=None))
+2019-09-12 20:33:50,270 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": 5.0, "_sender": "DmeModule", "_reason": null, "event_type": "EXPECTED_PASSIVITY_DURATION"}
+2019-09-12 20:33:50,270 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:50,270 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(SYSTEM_UTTERANCE_TO_SPEAK, ['', '', 'What time do you want to set your alarm to : 08:00, 08:30 or 09:00?'], sender=None, reason=None))
+2019-09-12 20:33:50,270 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": ["", "", "What time do you want to set your alarm to : 08:00, 08:30 or 09:00?"], "_sender": null, "_reason": null, "event_type": "SYSTEM_UTTERANCE_TO_SPEAK"}
+2019-09-12 20:33:50,271 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:50,271 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(MESSAGE_TO_GUI, [Screen(set_alarm, Set the alarm, [<tdm.nlg.tdm_gui_protocol.Element instance at 0x1089504d0>])], sender=None, reason=None))
+2019-09-12 20:33:50,271 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [{"Screen": {"elements": [{"Element": {"name": "move", "title": null, "items": [{"Item": {"attributes": [], "selected": false, "predicted": false, "value": "answer(selected_alarm_time(eight))", "title": "08:00"}}, {"Item": {"attributes": [], "selected": false, "predicted": false, "value": "answer(selected_alarm_time(eight_thirty))", "title": "08:30"}}, {"Item": {"attributes": [], "selected": false, "predicted": false, "value": "answer(selected_alarm_time(nine))", "title": "09:00"}}], "format": "", "voice_browsed": false, "value": "", "template": "list", "type": "list"}}], "name": "set_alarm", "title": "Set the alarm"}}], "_sender": null, "_reason": null, "event_type": "MESSAGE_TO_GUI"}
+2019-09-12 20:33:50,271 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,585 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_message({"content": [{"score": 1.0, "utterance": "eight"}], "_sender": "TextInputComponent", "_reason": null, "event_type": "RECOGNITION"})
+2019-09-12 20:33:53,602 - tdm - DEBUG - DeviceHandler.query_all(?X.selected_alarm_time(X), set([selected_alarm_time(eight), selected_alarm_time(eight_thirty), selected_alarm_time(nine)]), {}, eng)
+2019-09-12 20:33:53,603 - tdm - DEBUG - DeviceHandler invocation ID: d66628a66fdb3582f95abac9feeaee88
+2019-09-12 20:33:53,612 - tdm - DEBUG - DeviceHandler.is_valid_parameter(selected_alarm_time(eight), {}, eng)
+2019-09-12 20:33:53,620 - tdm - DEBUG - DeviceHandler.perform(SetAlarm, {selected_alarm_time(eight), resolved(?X.selected_alarm_time(X), set([selected_alarm_time(eight), selected_alarm_time(eight_thirty), selected_alarm_time(nine)]))}, eng)
+2019-09-12 20:33:53,620 - tdm - DEBUG - DeviceHandler invocation ID: 4d70f22681cbf69582011677da24e8c0
+2019-09-12 20:33:53,651 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(SELECTED_RECOGNITION, 'eight', sender=DmeModule, reason=None))
+2019-09-12 20:33:53,651 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": "eight", "_sender": "DmeModule", "_reason": null, "event_type": "SELECTED_RECOGNITION"}
+2019-09-12 20:33:53,651 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,651 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [{'predicate': 'selected_alarm_time', 'grammar_entry': '08:00', 'value': 'eight'}], sender=DmeModule, reason=None))
+2019-09-12 20:33:53,652 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [{"predicate": "selected_alarm_time", "grammar_entry": "08:00", "value": "eight"}], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:53,652 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,652 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [{'predicate': 'selected_alarm_time', 'grammar_entry': '08:00', 'value': 'eight'}], sender=DmeModule, reason=None))
+2019-09-12 20:33:53,652 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [{"predicate": "selected_alarm_time", "grammar_entry": "08:00", "value": "eight"}], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:53,652 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,652 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(END_SYSTEM_TURN, {'passivity_duration': 1.0, 'system_has_asked_question': False}, sender=DmeModule, reason=None))
+2019-09-12 20:33:53,653 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": {"passivity_duration": 1.0, "system_has_asked_question": false}, "_sender": "DmeModule", "_reason": null, "event_type": "END_SYSTEM_TURN"}
+2019-09-12 20:33:53,653 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,653 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(EXPECTED_PASSIVITY_DURATION, 1.0, sender=DmeModule, reason=None))
+2019-09-12 20:33:53,653 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": 1.0, "_sender": "DmeModule", "_reason": null, "event_type": "EXPECTED_PASSIVITY_DURATION"}
+2019-09-12 20:33:53,653 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,653 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(SYSTEM_UTTERANCE_TO_SPEAK, ['', 'The alarm was set to 08:00.'], sender=None, reason=None))
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": ["", "The alarm was set to 08:00."], "_sender": null, "_reason": null, "event_type": "SYSTEM_UTTERANCE_TO_SPEAK"}
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(MESSAGE_TO_GUI, [Popup(The alarm was set to 08:00., elements=[])], sender=None, reason=None))
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [{"Popup": {"elements": [], "title": "The alarm was set to 08:00."}}], "_sender": null, "_reason": null, "event_type": "MESSAGE_TO_GUI"}
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(GUI.POPUP, {'options': [], 'title': 'The alarm was set to 08:00.'}, sender=None, reason=None))
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": {"options": [], "title": "The alarm was set to 08:00."}, "_sender": null, "_reason": null, "event_type": "GUI.POPUP"}
+2019-09-12 20:33:53,654 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:54,711 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_message({"content": null, "_sender": "Frontend", "_reason": null, "event_type": "PASSIVITY"})
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [], sender=DmeModule, reason=None))
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(FACTS, [], sender=DmeModule, reason=None))
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [], "_sender": "DmeModule", "_reason": null, "event_type": "FACTS"}
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(END_SYSTEM_TURN, {'passivity_duration': None, 'system_has_asked_question': True}, sender=DmeModule, reason=None))
+2019-09-12 20:33:54,756 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": {"passivity_duration": null, "system_has_asked_question": true}, "_sender": "DmeModule", "_reason": null, "event_type": "END_SYSTEM_TURN"}
+2019-09-12 20:33:54,757 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:54,757 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(SYSTEM_UTTERANCE_TO_SPEAK, ['Returning to main menu.', 'Do you want to know the current time, know the current alarm, set the time or set the alarm?'], sender=None, reason=None))
+2019-09-12 20:33:54,757 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": ["Returning to main menu.", "Do you want to know the current time, know the current alarm, set the time or set the alarm?"], "_sender": null, "_reason": null, "event_type": "SYSTEM_UTTERANCE_TO_SPEAK"}
+2019-09-12 20:33:54,757 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:54,758 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(MESSAGE_TO_GUI, [ClosePopup(), Screen(top, Main menu, [<tdm.nlg.tdm_gui_protocol.Element instance at 0x108900680>])], sender=None, reason=None))
+2019-09-12 20:33:54,758 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": [{"ClosePopup": {}}, {"Screen": {"elements": [{"Element": {"name": "move", "title": "", "items": [{"Item": {"attributes": null, "selected": false, "predicted": false, "value": "ask(?X.current_time(X))", "title": "The current time?"}}, {"Item": {"attributes": null, "selected": false, "predicted": false, "value": "ask(?X.current_alarm(X))", "title": "The current alarm?"}}, {"Item": {"attributes": null, "selected": false, "predicted": false, "value": "request(set_time)", "title": "Set the time"}}, {"Item": {"attributes": null, "selected": true, "predicted": false, "value": "request(set_alarm)", "title": "Set the alarm"}}], "format": "", "voice_browsed": false, "value": "", "template": "menu", "type": "list"}}], "name": "top", "title": "Main menu"}}], "_sender": null, "_reason": null, "event_type": "MESSAGE_TO_GUI"}
+2019-09-12 20:33:54,758 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:33:58,454 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_message({"content": [{"score": 1.0, "utterance": "whats the alarm"}], "_sender": "TextInputComponent", "_reason": null, "event_type": "RECOGNITION"})
+2019-09-12 20:33:58,484 - tdm - DEBUG - DeviceHandler.query_all(?X.current_alarm(X), {}, eng)
+2019-09-12 20:33:58,484 - tdm - DEBUG - DeviceHandler invocation ID: 3206bfb0e9adb53fc9eb19286c85dae7
+2019-09-12 20:33:58,485 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_event(Event(BACKEND_ERROR, None, sender=None, reason=None))
+2019-09-12 20:33:58,485 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): writing {"content": null, "_sender": null, "_reason": null, "event_type": "BACKEND_ERROR"}
+2019-09-12 20:33:58,485 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0'): OK
+2019-09-12 20:35:15,702 - tdm - DEBUG - FrontendConnectionHandler(id=4438389072, session='2019-09-12T20_33_47_0').on_close()
+2019-09-12 20:35:15,702 - tdm - DEBUG - SessionManager.stop('2019-09-12T20_33_47_0')
+2019-09-12 20:35:15,703 - tdm - DEBUG - TdmApplication.stop(): Stopping HTTP server
+2019-09-12 20:35:15,703 - tdm - DEBUG - TdmApplication.stop(): Stopping IO-loop
+2019-09-12 20:35:15,704 - tdm - DEBUG - TdmApplication.stop(): Stopping sessions []

@@ -1,0 +1,76 @@
+--- main menu
+S> What would you like to do?
+
+--- call (incremental)
+S> What would you like to do?
+U> make a call
+S> Which contact?
+U> john
+S> Which phone?
+U> mobile
+S> Calling John's mobile
+
+--- call (one-shot)
+S> What would you like to do?
+U> call john's mobile
+S> Calling John's mobile
+
+--- call (over answering)
+S> What would you like to do?
+U> call John
+S> Which phone?
+U> mobile
+S> Calling John's mobile
+
+--- phone number (incremental)
+S> What would you like to do?
+U> I want to know a contact's number
+S> Which contact?
+U> Mary
+S> Which phone?
+U> work
+S> It's 0784736475.
+
+--- phone number (one-shot)
+S> What would you like to do?
+U> what is Mary's mobile
+S> It's 0706574839.
+
+--- phone number (over-answering)
+S> What would you like to do?
+U> what is Mary's number
+S> Which phone?
+U> work phone
+S> It's 0784736475.
+
+--- topic switch
+S> What would you like to do?
+U> call john
+S> Which phone?
+U> what is john's work number
+S> It's 0736582934.
+
+--- context recall
+S> What would you like to do?
+U> call john
+S> Which phone?
+U> what is john's work number
+S> It's 0736582934.
+U>
+S> Returning to call. Which phone?
+U> mobile
+S> Calling John's mobile
+
+--- topic recognition
+S> What would you like to do?
+U> John
+S> Do you want to call or know the contact's phone number?
+U> call
+S> Which phone?
+U> home
+S> Calling John's home
+
+--- parameter validation
+S> What would you like to do?
+U> call Andy
+S> Andy has no phone number

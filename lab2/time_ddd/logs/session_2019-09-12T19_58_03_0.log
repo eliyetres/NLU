@@ -1,0 +1,22 @@
+2019-09-12 19:58:03,967 - session_2019-09-12T19_58_03_0 - DEBUG - Backend()
+2019-09-12 19:58:20,244 - session_2019-09-12T19_58_03_0 - ERROR - Encountered an error, sending event 'BACKEND_ERROR'
+Traceback (most recent call last):
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/backend.py", line 100, in handle_event_from_external_queue
+    self._handle_external_event(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/backend.py", line 113, in _handle_external_event
+    resulting_events = self._send_event_through_components(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/backend.py", line 126, in _send_event_through_components
+    responses = self._nlg.generate(events)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/nlg/component.py", line 27, in generate
+    resulting_events = [result for result in all_results if result is not None]
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/nlg/component.py", line 35, in _generate_events
+    yield self._generator.generate(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/nlg/generator.py", line 26, in generate
+    utterance_parts = [self._generate_utterance_part(move) for move in moves]
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/nlg/generator.py", line 40, in _generate_utterance_part
+    return self.move_to_string(move, ddd)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/nlg/generator.py", line 51, in move_to_string
+    return self._handle_failed_generation(move, grammar, parse_exception)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/nlg/generator.py", line 61, in _handle_failed_generation
+    raise GenerateError(message)
+GenerateError: Generator: failed to generate move 'Move(answer(current_alarm(alarm_off)), ddd_name=u'time')' with grammar 'time_eng_GfGrammarForDynamicEntities': Expected parse results for u'Move ( answer ( current_alarm ( alarm_off ) ) )' with category 'System' and grammar_path u'grammar/build/eng/time_sem.pgf' but got none

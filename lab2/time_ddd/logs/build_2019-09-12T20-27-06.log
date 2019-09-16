@@ -1,0 +1,32 @@
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08:30', name=u'eight_thirty')
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8:30', name=u'eight_thirty')
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8 30', name=u'eight_thirty')
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08 30', name=u'eight_thirty')
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='eight thirty', name=u'eight_thirty')
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity returns u'eight_thirty'
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='09:00', name=u'nine')
+2019-09-12 20:27:06,030 - build - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='9:00', name=u'nine')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='09', name=u'nine')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='9', name=u'nine')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='nine', name=u'nine')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'nine'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08:00', name=u'eight')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8:00', name=u'eight')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='8', name=u'eight')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='08', name=u'eight')
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:27:06,031 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='eight', name=u'eight')
+2019-09-12 20:27:06,032 - build - DEBUG - EntityDb(time): add_entity returns u'eight'
+2019-09-12 20:27:06,032 - build - DEBUG - EntityDb(time): add_entity(sort=u'alarm_time', grammar_entry='off', name=u'alarm_off')
+2019-09-12 20:27:06,032 - build - DEBUG - EntityDb(time): add_entity returns u'alarm_off'

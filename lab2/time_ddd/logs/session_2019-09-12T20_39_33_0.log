@@ -1,0 +1,50 @@
+2019-09-12 20:39:33,665 - session_2019-09-12T20_39_33_0 - DEBUG - Backend()
+2019-09-12 20:39:43,386 - session_2019-09-12T20_39_33_0 - ERROR - Encountered an error, sending event 'BACKEND_ERROR'
+Traceback (most recent call last):
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/backend.py", line 100, in handle_event_from_external_queue
+    self._handle_external_event(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/backend.py", line 113, in _handle_external_event
+    resulting_events = self._send_event_through_components(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/backend.py", line 124, in _send_event_through_components
+    moves = self._dm.act(events)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/component.py", line 47, in act
+    self._act_on_queued_events()
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/component.py", line 86, in _act_on_queued_events
+    self._handle_event(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/component.py", line 101, in _handle_event
+    self.forward_event_internally_and_externally(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/component.py", line 104, in forward_event_internally_and_externally
+    self._event_dispatcher.dispatch(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/event_dispatcher.py", line 27, in dispatch
+    self._send_event_to_subscribing_modules(event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/event_dispatcher.py", line 49, in _send_event_to_subscribing_modules
+    handler, event.get_type(), event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/event_dispatcher.py", line 55, in _send_to_subscribing_module
+    module.process_event(protected_event)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/lib/module.py", line 50, in process_event
+    handler()
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/dme_module.py", line 56, in _handle_interpretation
+    self._set_input_event_and_run_update_and_select()
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/dme_module.py", line 61, in _set_input_event_and_run_update_and_select
+    self.run_update_and_set_ddd_when_needed()
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/dme_module.py", line 66, in run_update_and_set_ddd_when_needed
+    self.run_update()
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/dme_module.py", line 131, in run_update
+    self.update_module.run(self._tis)
+  File "tdm/dm/update.py", line 167, in tdm.dm.update.UpdateModule.run (tdm/dm/update.c:11076)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/isu_module.py", line 128, in repeatGroupSequence
+    if self._apply(ruleGroup, identifier, tis):
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/isu_module.py", line 139, in _apply
+    if self.applyRule(rule, tis):
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/isu_module.py", line 102, in applyRule
+    rule.applyEffects(self._ddd_manager)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/dm/isu_rule.py", line 26, in applyEffects
+    apply(self.effects, arguments)
+  File "tdm/dm/update.py", line 2015, in tdm.dm.update.exec_dev_query.effects (tdm/dm/update.c:94763)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/ddd/device_handler.py", line 351, in query
+    results = self.query_all(question, commitments, language_code)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/ddd/device_handler.py", line 250, in query_all
+    self._validate_query_result(result_descriptions, query, predicate)
+  File "/Users/marta/tdm7/lib/python2.7/site-packages/tdm/ddd/device_handler.py", line 271, in _validate_query_result
+    [self._name_from_result_description(predicate, description) for description in result_descriptions]
+TypeError: 'NoneType' object is not iterable

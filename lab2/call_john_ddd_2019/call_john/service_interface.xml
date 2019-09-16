@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service_interface>
+  <!-- <action name="MakeCall">
+    <parameters>
+      <parameter predicate="select_contact" format="value"/>
+      <parameter predicate="select_number" format="value"/>
+    </parameters>
+    <failure_reasons/>
+    <target>
+      <device_module device="CallJohnDevice"/>
+    </target>
+  </action> -->
+
+  <!-- <query name="phone_number_of_contact">
+      <parameters/>
+      <target>
+        <device_module device="CallJohnDevice"/>
+      </target>
+    </query>  -->
+
+</service_interface>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service_interface>
+  <action name="SetTime">
+    <parameters>
+      <parameter predicate="hour_to_set" format="value"/>
+      <parameter predicate="minute_to_set" format="value"/>
+    </parameters>
+    <failure_reasons/>
+    <target>
+      <device_module device="TimeDevice"/>
+    </target>
+  </action>
+  <action name="SetAlarm">
+    <parameters>
+      <parameter predicate="selected_alarm_time" format="value"/>
+    </parameters>
+    <failure_reasons/>
+    <target>
+      <device_module device="TimeDevice"/>
+    </target>
+  </action>
+  <query name="current_time">
+    <parameters/>
+    <target>
+      <device_module device="TimeDevice"/>
+    </target>
+  </query>
+  <query name="current_alarm">
+    <parameters/>
+    <target>
+      <device_module device="TimeDevice"/>
+    </target>
+  </query>
+  <query name="selected_alarm_time">
+    <parameters/>
+    <target>
+      <device_module device="TimeDevice"/>
+    </target>
+  </query>
+</service_interface>

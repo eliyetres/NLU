@@ -1,0 +1,15 @@
+{
+    "active_ddd": "time",
+    "asr": "none",
+    "ddds": [
+        "time"
+    ],
+    "overrides": null,
+    "repeat_questions": true,
+    "rerank_amount": 0.2,
+    "supported_languages": [
+        "eng"
+    ],
+    "use_recognition_profile": false,
+    "use_word_list_correction": false
+}

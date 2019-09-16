@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar>
+  <action name="top">
+    <one-of>
+      <item>main menu</item>
+      <item>top</item>
+      <item>beginning</item>
+      <item>cancel</item>
+      <item>forget it</item>
+      <item>never mind</item>
+      <item>abort</item>
+    </one-of>
+  </action>
+
+  <action name="up">
+    <one-of>
+      <item>up</item>
+      <item>back</item>
+      <item>go back</item>
+    </one-of>
+  </action>
+
+  <action name="set_time">
+    <one-of>
+      <item>set the time</item>
+      <item>set the clock</item>
+      <item>set the time to <slot predicate="hour_to_set" type="individual"/></item>
+      <item>set the time to <slot predicate="hour_to_set" type="individual"/> <slot predicate="minute_to_set" type="individual"/></item>
+    </one-of>
+  </action>
+
+  <action name="set_alarm">
+    <one-of>
+      <item>set the alarm</item>
+      <item>set the alarm to <slot predicate="selected_alarm_time"/> </item>
+    </one-of>
+  </action>
+
+  <question speaker="user" predicate="current_time" type="wh_question">
+    <one-of>
+      <item>what time is it</item>
+      <item>the current time</item>
+      <item>what it the current time</item>
+    </one-of>
+  </question>
+  <!-- this adds an alternative ways for the user to ask about the time, by saying "what time is it" or "what is the current time"-->
+
+  <question speaker="user" predicate="current_alarm" type="wh_question">
+    <one-of>
+      <item>whats the alarm</item>
+      <item>the current alarm</item>
+      <item>what it the current alarm</item>
+    </one-of>
+  </question>
+
+  <question speaker="all" predicate="current_time" type="wh_question">the current time</question>
+  <!-- regardless of who is speaking, when asking or talking about a question for an argument of "current_time", they can use "the current time". For example, to ask for the current time, the user can say "What is the current time?". When returning to discussing this question (after talking about something else, the system can say "Returning to the issue of the current time") -->
+
+  <question speaker="all" predicate="current_alarm" type="wh_question">the current alarm</question>
+
+  <question speaker="system" predicate="minute_to_set" type="wh_question">what minute</question>
+  <!-- this is specific to system utterances. To ask for the minute to set the clock to, the system will ask "What minute?" -->
+
+  <question speaker="system" predicate="hour_to_set" type="wh_question">what hour</question>
+  <!-- same as "what minute" above -->
+
+  <question speaker="system" predicate="selected_alarm_time" type="wh_question">what time do you want to set your alarm to</question>
+
+  <report action="SetTime" status="ended">the time was set to <slot predicate="hour_to_set"/>:<slot predicate="minute_to_set"/>.</report>
+  <!-- when the system has completed the SetTime action, the system will report this by saying "The time was set to (hour_to_set) (minute_to_set)" where (hour_to_set) and (minute_to_set) are the arguments of these predicates as stored in the information state (shared.com) and used in executing the command -->
+
+  <answer speaker="system" predicate="current_alarm">The alarm is <slot predicate="current_alarm"/></answer>
+  <!--this is a system answer to a query. If it is not defined the system answers directly with the individual. Here the individual is part of a more elaborated answer design -->
+
+  <report action="SetAlarm" status="ended">the alarm was set to <slot predicate="selected_alarm_time"/>.</report>
+
+  <individual name="eight">
+    <one-of>
+      <item>08:00</item>
+      <item>8:00</item>
+      <item>8</item>
+      <item>08</item>
+      <item>eight</item>
+    </one-of>
+  </individual>
+
+  <individual name="eight_thirty">
+    <one-of>
+      <item>08:30</item>
+      <item>8:30</item>
+      <item>8 30</item>
+      <item>08 30</item>
+      <item>eight thirty</item>
+    </one-of>
+  </individual>
+
+  <individual name="nine">
+    <one-of>
+      <item>09:00</item>
+      <item>9:00</item>
+      <item>09</item>
+      <item>9</item>
+      <item>nine</item>
+    </one-of>
+  </individual>
+
+  <individual name="alarm_off">off</individual>
+
+</grammar>

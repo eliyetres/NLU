@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="CallJohnDomain" is_super_domain="true">
+  <!--   <goal type="perform" action="top">
+        <plan>
+          <forget_all/>
+          <findout type="goal"/>
+        </plan>
+      </goal> -->
+    <goal type="perform" action="top">
+        <plan>
+          <forget_all/>
+          <findout type="alt_question">
+            <alt>
+              <resolve type="wh_question" predicate="phone_number_of_contact"/>
+            </alt>
+            <alt>
+                <perform action="make_call"/>
+              </alt>   
+            </findout>         
+        </plan>
+      </goal>
+
+      
+  <!-- <goal type="perform" action="make_call">
+      <plan>
+        <findout type="wh_question" predicate="selected_contact"/>
+        <findout type="wh_question" predicate="selected_number"/>
+        <dev_perform action="MakeCall" postconfirm="true"/>
+      </plan>
+      <postcond>
+        <device_activity_terminated action="MakeCall"/>
+      </postcond>
+    </goal> -->
+
+    <goal type="resolve" question_type="wh_question" predicate="phone_number_of_contact">
+        <plan>
+          <dev_query predicate="phone_number_of_contact" type="wh_question"/>
+        </plan>
+      </goal> 
+
+</domain>
