@@ -11,8 +11,12 @@
     </target>
   </action>
 
-  <query name="TellNumber">
-      <parameters/>
+  <query name="phone_number_of_contact">
+      <parameters>
+          <parameter predicate="selected_contact" format="value"/>
+          <parameter predicate="selected_number" format="value"/>
+        </parameters>
+        
       <target>
         <device_module device="CallJohnDevice"/>
       </target>

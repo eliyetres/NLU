@@ -36,7 +36,7 @@
       <one-of>
           <item>tell me a phone number</item>
           <item>I want to know a contact's number</item>    
-          <item>what is <slot predicate="selected_contact" type="individual"/> mobile</item>
+          <item>what is <slot predicate="selected_contact" type="individual"/> <slot predicate="selected_number" type="individual"/></item>
           <item>what is <slot predicate="selected_contact" type="individual"/> number</item>           
         </one-of>
       </question>
@@ -94,7 +94,7 @@
     <slot predicate="selected_number"/>
   </report>
 
-  <report action="TellNumber" status="ended">
+  <report action="phone_number_of_contact" status="ended">
       It's <slot predicate="phone_number_of_contact"/>
     </report>
 

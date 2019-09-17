@@ -25,12 +25,14 @@
       <device_module device="TimeDevice"/>
     </target>
   </query>
+
   <query name="current_alarm">
     <parameters/>
     <target>
       <device_module device="TimeDevice"/>
     </target>
   </query>
+  
   <query name="selected_alarm_time">
     <parameters/>
     <target>

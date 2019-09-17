@@ -44,10 +44,10 @@ class CallJohnDevice(DddDevice):
             phone = self.device.CONTACTS.get(selected_number)
             return True
 
-    class TellNumber(DeviceWHQuery):
-        def perform(self, phone_number_of_contact):
-            phone_number = self.device.PHONE_NUMBERS.get(phone_number_of_contact)
-            return True
+    class phone_number_of_contact(DeviceWHQuery):
+        def perform(self, selected_contact, selected_number):
+            phone_number = self.device.PHONE_NUMBERS[selected_contact].get(selected_number)
+            return [phone_number]
 
     class PhoneNumberAvailable(Validity):
         def is_valid(self, selected_contact):
