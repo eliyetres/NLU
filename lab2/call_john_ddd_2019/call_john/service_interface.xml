@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
-  <!-- <action name="MakeCall">
+  <action name="MakeCall">
     <parameters>
-      <parameter predicate="select_contact" format="value"/>
-      <parameter predicate="select_number" format="value"/>
+      <parameter predicate="selected_contact" format="value"/>
+      <parameter predicate="selected_number" format="value"/>
     </parameters>
     <failure_reasons/>
     <target>
       <device_module device="CallJohnDevice"/>
     </target>
-  </action> -->
+  </action>
 
-  <!-- <query name="phone_number_of_contact">
+  <query name="TellNumber">
       <parameters/>
       <target>
         <device_module device="CallJohnDevice"/>
       </target>
-    </query>  -->
+    </query> 
+
+    <validator name="PhoneNumberAvailable">
+        <parameters>
+          <parameter predicate="selected_contact" format="value"/>
+        </parameters>
+        <target>
+          <device_module device="CallJohnDevice"/>
+        </target>
+      </validator>
+    
 
 </service_interface>

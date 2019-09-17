@@ -37,3 +37,18 @@ class CallJohnDevice(DddDevice):
         "Mary": MARY,
         "Andy": ANDY,
     }
+
+    class MakeCall(DeviceAction):
+        def perform(self, selected_contact, selected_number):
+            contacts = self.device.CONTACTS.get(selected_contact)
+            phone = self.device.CONTACTS.get(selected_number)
+            return True
+
+    class TellNumber(DeviceWHQuery):
+        def perform(self, phone_number_of_contact):
+            phone_number = self.device.PHONE_NUMBERS.get(phone_number_of_contact)
+            return True
+
+    class PhoneNumberAvailable(Validity):
+        def is_valid(self, selected_contact):
+            return True

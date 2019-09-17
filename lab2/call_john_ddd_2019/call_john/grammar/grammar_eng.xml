@@ -26,6 +26,7 @@
       <item>call</item>      
       <item>I want to call</item>
       <item>call <slot predicate="selected_contact" type="individual"/></item>
+      <item>call <slot predicate="selected_contact" type="individual"/> mobile</item>
     </one-of>
   </action>
 
@@ -33,13 +34,14 @@
       <one-of>
           <item>tell me a phone number</item>
           <item>I want to know a contact's number</item>    
-          <item>what is <slot predicate="selected_contact" type="individual"/> number</item>             
+          <item>what is <slot predicate="selected_contact" type="individual"/> mobile</item>
+          <item>what is <slot predicate="selected_contact" type="individual"/> number</item>           
         </one-of>
       </question>
 
-      <individual name="mobile">mobile</individual>
-      <individual name="work">work</individual>
-      <individual name="home">home</individual>
+    <individual name="mobile">mobile</individual>
+    <individual name="work">work</individual>
+    <individual name="home">home</individual>
   
   
     <individual name="contact_john">
@@ -67,15 +69,13 @@
       </one-of>
     </individual>
 
-  <question speaker="system" predicate="select_contact" type="wh_question">
+  <question speaker="system" predicate="selected_contact" type="wh_question">
       which contact
     </question>
   
-    <question speaker="system" predicate="select_number" type="wh_question">
+  <question speaker="system" predicate="selected_number" type="wh_question">
       which phone
     </question>
-
-    
 
 
   <answer speaker="system" predicate="phone_number_of_contact">
@@ -83,19 +83,22 @@
         <slot predicate="phone_number_of_contact"/>
     </answer>
 
-    <question speaker="all" predicate="phone_number_of_contact" type="wh_question">the contact's phone number</question>
+
+  <question speaker="all" predicate="phone_number_of_contact" type="wh_question">the contact's phone number</question>
 
 
-  <!-- <report action="MakeCall" status="ended">
-    Calling
-    <slot predicate="selected_contact"/>
-    <slot predicate="select_number"/>
+  <report action="MakeCall" status="ended">
+    Calling <slot predicate="selected_contact"/>
+    <slot predicate="selected_number"/>
   </report>
 
-  <report action="TellNumber" status="ended">
-      It's 
-      <slot predicate="phone_number_of_contact"/>
+  <!-- <report action="TellNumber" status="ended">
+      It's <slot predicate="phone_number_of_contact"/>
     </report> -->
+
+    <validity name="PhoneNumberAvailable">
+        <slot predicate="selected_contact"/> has no phone number
+      </validity>
 
 
 </grammar>
