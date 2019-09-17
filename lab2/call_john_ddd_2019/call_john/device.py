@@ -51,10 +51,11 @@ class CallJohnDevice(DddDevice):
 
     class PhoneNumberAvailable(Validity):
         def is_valid(self, selected_contact):
-            phone_number = self.device.PHONE_NUMBERS.get(selected_contact)
-            print(selected_contact)
-            print(phone_number)
-            if len(phone_number) == 0:
-                return True
-            else: 
+            try:
+                self.device.PHONE_NUMBERS.get(selected_contact)
+                           
+            except Exception as e:
+                print(e.args)
                 return False
+            
+            return True 

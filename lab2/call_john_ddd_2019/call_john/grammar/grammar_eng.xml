@@ -98,9 +98,7 @@
       It's <slot predicate="phone_number_of_contact"/>
     </report>
 
-    <validity name="PhoneNumberAvailable">
-        <slot predicate="selected_contact"/> has no phone number
-      </validity>
+  <validity name="PhoneNumberAvailable"><slot predicate="selected_contact"/> has no phone number</validity>
 
 
 </grammar>

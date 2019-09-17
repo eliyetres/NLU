@@ -18,14 +18,14 @@
       </target>
     </query> 
 
-    <validator name="PhoneNumberAvailable">
-        <parameters>
-          <parameter predicate="selected_contact" format="value"/>
-        </parameters>
-        <target>
-          <device_module device="CallJohnDevice"/>
-        </target>
-      </validator>
+  <validator name="PhoneNumberAvailable">
+      <parameters>
+        <parameter predicate="selected_contact" format="value"/>
+      </parameters>
+      <target>
+        <device_module device="CallJohnDevice"/>
+      </target>
+    </validator>
     
 
 </service_interface>
