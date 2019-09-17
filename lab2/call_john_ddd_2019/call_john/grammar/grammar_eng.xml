@@ -27,6 +27,8 @@
       <item>I want to call</item>
       <item>call <slot predicate="selected_contact" type="individual"/></item>
       <item>call <slot predicate="selected_contact" type="individual"/> mobile</item>
+      <item>call <slot predicate="selected_contact" type="individual"/>'s <slot predicate="selected_number" type="individual"/>
+      </item>
     </one-of>
   </action>
 
@@ -92,9 +94,9 @@
     <slot predicate="selected_number"/>
   </report>
 
-  <!-- <report action="TellNumber" status="ended">
+  <report action="TellNumber" status="ended">
       It's <slot predicate="phone_number_of_contact"/>
-    </report> -->
+    </report>
 
     <validity name="PhoneNumberAvailable">
         <slot predicate="selected_contact"/> has no phone number
