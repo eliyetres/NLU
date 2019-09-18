@@ -5,11 +5,10 @@
 
     <sort name="type_phone"/> 
     <sort name="contact"/>
-    <sort name="phone_number"/>
 
     <predicate name ="selected_number" sort="type_phone"/>
     <predicate name ="selected_contact"  sort="contact"/> 
-    <predicate name ="phone_number_of_contact" sort="phone_number"/> 
+    <predicate name ="phone_number_of_contact" sort="string"/> 
     
     <individual name ="contact_john" sort ="contact"/>
     <individual name ="contact_lisa" sort ="contact"/>
