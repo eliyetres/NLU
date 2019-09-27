@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
+
   <action name="MakeCall">
     <parameters>
       <parameter predicate="selected_contact" format="value"/>
@@ -15,8 +16,7 @@
       <parameters>
           <parameter predicate="selected_contact" format="value"/>
           <parameter predicate="selected_number" format="value"/>
-        </parameters>
-        
+        </parameters>        
       <target>
         <device_module device="CallJohnDevice"/>
       </target>

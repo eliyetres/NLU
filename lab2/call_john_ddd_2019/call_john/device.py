@@ -46,16 +46,36 @@ class CallJohnDevice(DddDevice):
 
     class phone_number_of_contact(DeviceWHQuery):
         def perform(self, selected_contact, selected_number):
-            phone_number = self.device.PHONE_NUMBERS[selected_contact].get(selected_number)
+            phone_number = self.device.PHONE_NUMBERS[selected_contact][selected_number]
             return [phone_number]
 
     class PhoneNumberAvailable(Validity):
         def is_valid(self, selected_contact):
-            try:
+            phone_number = self.device.PHONE_NUMBERS[selected_contact]
+            if phone_number == None:
+                return False
+            return True
+
+            """ try:
+                print("trying ",selected_contact)
                 self.device.PHONE_NUMBERS.get(selected_contact)
                            
             except Exception as e:
+                print("FAIL!")
                 print(e.args)
                 return False
             
-            return True 
+            return True  """
+
+    """class BasicActionRecognizer(EntityRecognizer):
+        def recognize(self, string, unused_language):
+            result = []
+            words = string.lower().split()
+            for contact in self.device.CONTACT_NUMBERS.keys():
+                if contact.lower() in words:
+                    recognized_entity = {
+                        "sort": "contact",
+                        "grammar_entry": contact
+                    }
+                    result.append(recognized_entity)
+            return result """

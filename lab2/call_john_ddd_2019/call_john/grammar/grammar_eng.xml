@@ -22,13 +22,12 @@
 
   <action name="make_call">
     <one-of>
-      <item>make a call</item>
-      <item>call</item>      
+      <item>call</item>
+      <item>make a call</item>       
       <item>I want to call</item>
-      <item>call <slot predicate="selected_contact" type="individual"/></item>
-      <item>call <slot predicate="selected_contact" type="individual"/> mobile</item>
-      <item>call <slot predicate="selected_contact" type="individual"/>'s <slot predicate="selected_number" type="individual"/>
-      </item>
+      <item>call <slot predicate="selected_contact"/></item>
+      <item>call <slot predicate="selected_contact"/> phone</item>
+      <item>call <slot predicate="selected_contact"/> <slot predicate="selected_number"/></item>
     </one-of>
   </action>
 
@@ -36,20 +35,42 @@
       <one-of>
           <item>tell me a phone number</item>
           <item>I want to know a contact's number</item>    
-          <item>what is <slot predicate="selected_contact" type="individual"/> <slot predicate="selected_number" type="individual"/></item>
-          <item>what is <slot predicate="selected_contact" type="individual"/> number</item>           
+          <item>what is <slot predicate="selected_contact"/> <slot predicate="selected_number"/></item>
+          <item>what is <slot predicate="selected_contact"/> number</item>  
+          <item>what is <slot predicate="selected_contact"/> <slot predicate="selected_number"/> number</item> 
+          <item>what's <slot predicate="selected_contact"/> <slot predicate="selected_number"/> number </item>
         </one-of>
       </question>
 
-    <individual name="mobile">mobile</individual>
-    <individual name="work">work</individual>
-    <individual name="home">home</individual>
+    <individual name="mobile">
+      <one-of>
+        <item>mobile</item>
+        <item>mobile phone</item>
+        <item>mobile number</item>
+        <item>cell</item>
+      </one-of>
+    </individual>
+    <individual name="work">
+        <one-of>
+          <item>work</item>
+          <item>work phone</item>
+          <item>work number</item>
+          </one-of>
+        </individual>
+    <individual name="home">
+      <one-of>
+        <item>home</item>
+        <item>home phone</item>
+        <item>home number</item>
+      </one-of>
+    </individual>
   
   
     <individual name="contact_john">
       <one-of>
         <item>John</item>
         <item>John's</item>
+        <item>john</item>
       </one-of>
     </individual>
     <individual name="contact_mary">
@@ -81,24 +102,19 @@
 
 
   <answer speaker="system" predicate="phone_number_of_contact">
-        <slot predicate="selected_contact" type="individual"/> has number
-        <slot predicate="phone_number_of_contact"/>
+        It's <slot predicate="phone_number_of_contact"/>
     </answer>
 
 
   <question speaker="all" predicate="phone_number_of_contact" type="wh_question">the contact's phone number</question>
 
+  <validity name="PhoneNumberAvailable"> <slot predicate="selected_contact"/> has no phone number</validity>
 
   <report action="MakeCall" status="ended">
-    Calling <slot predicate="selected_contact"/>
-    <slot predicate="selected_number"/>
+    Calling <slot predicate="selected_contact"/>'s <slot predicate="selected_number"/>
   </report>
 
-  <report action="phone_number_of_contact" status="ended">
-      It's <slot predicate="phone_number_of_contact"/>
-    </report>
 
-  <validity name="PhoneNumberAvailable"><slot predicate="selected_contact"/> has no phone number</validity>
 
 
 </grammar>

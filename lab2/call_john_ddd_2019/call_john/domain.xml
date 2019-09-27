@@ -37,6 +37,7 @@
             <findout type="wh_question" predicate="selected_contact"/>
             <findout type="wh_question" predicate="selected_number"/>
           <dev_query predicate="phone_number_of_contact" type="wh_question"/>
+          <forget predicate="selected_number"/>
         </plan>
       </goal> 
 
