@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <domain name="WeatherDomain" is_super_domain="true">
-  <goal type="perform" action="top">
+
+    <!-- Domain: Modify the "top" plan so that the resulting utterance is: "Do you want to know about the temperature or the current weather?"
+    Tip: implement <findout type="alt_question> (check documentation to find the syntax) -->
+  <!-- <goal type="perform" action="top">
     <plan>
       <forget_all/>
       <findout type="goal"/>
     </plan>
-  </goal>
+  </goal> -->
+  <goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="alt_question">
+        <alt>
+          <resolve type="wh_question" predicate="temperature"/>
+        </alt>
+        <alt>
+            <resolve type="wh_question" predicate="weather"/>
+          </alt>   
+        </findout>         
+    </plan>
+  </goal> 
+
+
+  <goal type="resolve" question_type="wh_question" predicate="temperature">
+      <plan>
+          <findout type="wh_question" predicate="city_to_search"/>
+          <findout type="wh_question" predicate="country_to_search"/>
+        <dev_query predicate="temperature" type="wh_question"/>
+        <!-- <forget predicate="country_to_search"/> -->
+      </plan>
+    </goal> 
+    
+    <goal type="resolve" question_type="wh_question" predicate="weather">
+        <plan>
+            <findout type="wh_question" predicate="city_to_search"/>
+            <findout type="wh_question" predicate="country_to_search"/>
+          <dev_query predicate="weather" type="wh_question"/>
+          <!-- <forget predicate="country_to_search"/> -->
+        </plan>
+      </goal> 
+
+
 </domain>

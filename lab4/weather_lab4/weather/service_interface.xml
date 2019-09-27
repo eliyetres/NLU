@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
-    <entity_recognizer name="WeatherRecognizer">
+    <!--     <entity_recognizer name="WeatherRecognizer">
         <target>
             <device_module device="WeatherDevice"/>
         </target>
-    </entity_recognizer>
+    </entity_recognizer> -->
+
+    <query name="weather">
+        <parameters>
+            <parameter predicate="city_to_search" format="grammar_entry"/>
+            <parameter predicate="country_to_search" format="grammar_entry"/>
+        </parameters>
+        <target>
+            <device_module device="WeatherDevice"/>
+        </target>
+    </query>
+
+
+    <query name="temperature">
+        <parameters>
+            <parameter predicate="city_to_search" format="grammar_entry"/>
+            <parameter predicate="country_to_search" format="grammar_entry"/>
+        </parameters>
+        <target>
+            <device_module device="WeatherDevice"/>
+        </target>
+    </query>
+
 </service_interface>

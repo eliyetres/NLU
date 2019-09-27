@@ -1,3 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ontology name="WeatherOntology">
+
+    <!-- Ontology: add the sorts (city, country), predicates (city_to_search, country_to_search, temperature, weather) and individuals ("city_london", "country_uk", etc.) that you need; you may need to toy around with the API to understand how cities and countries are represented -->
+    <sort name="city"/>
+    <sort name="country"/>
+
+    <predicate name="city_to_search" sort="city"/>
+    <predicate name="country_to_search" sort="country"/>
+    
+    <predicate name="temperature" sort="string"/>
+    <predicate name="weather" sort="string"/>
+
+    <individual name="city_gothenburg" sort="city"/>
+    <individual name="city_london" sort="city"/>
+
+    <individual name="country_uk" sort="country"/>
+    <individual name="country_swe" sort="country"/>
+
+
 </ontology>

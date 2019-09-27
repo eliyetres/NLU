@@ -1,2 +1,10 @@
 --- main menu
 S> What would you like to do?
+
+--- city temperature
+U> what is the temperature
+S> What city?
+U> London
+S> What country?
+U> UK
+S> The temperature is *

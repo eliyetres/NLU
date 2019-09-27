@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\eliye\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "python.pythonPath": "E:\\Users\\Elin\\Anaconda3\\python.exe",
     "python.formatting.provider": "autopep8",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
