@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="WeatherDomain" is_super_domain="true">
+  <goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="goal"/>
+    </plan>
+  </goal>
+</domain>
