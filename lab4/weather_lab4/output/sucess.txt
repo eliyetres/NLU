@@ -1,0 +1,43 @@
+(tdm) [gusihaliel@GU.GU.SE@eduserv weather_lab4]$ tdm build
+Building generated grammar for DDD 'weather'.
+[eng] Cleaning build directory 'build/eng'...Done.
+Not using RASA NLU, will not clean RASA build directories.
+[eng] Generating grammar.
+[eng] Asserting that language grammar is lower case...Done.
+[eng] Finished generating grammar.
+[eng] Building generated grammar.
+[eng] Finished building generated grammar.
+[eng] Not using RASA NLU, will not generate and build RASA models.
+[eng] Not using word list correction, will not generate word list.
+[eng] No ASR specified, will not build language model.
+Finished building generated grammar for DDD 'weather'.
+(tdm) [gusihaliel@GU.GU.SE@eduserv weather_lab4]$ tdm test eng
+Running interactiontests from weather/test/interaction_tests_eng.txt
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with broken clouds
+.http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '9', 'units:', 'metric')
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with broken clouds
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with broken clouds
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=imperial&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '55', 'units:', 'imperial')
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=imperial&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '55', 'units:', 'imperial')
+.http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.
+----------------------------------------------------------------------
+Ran 12 tests in 2.141s
+
+OK
+(tdm) [gusihaliel@GU.GU.SE@eduserv weather_lab4]$

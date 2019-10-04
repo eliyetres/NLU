@@ -39,37 +39,62 @@
     </one-of>
   </individual>
   <individual name="country_swe">Sweden</individual>
+
+
+  <individual name="metric">
+    <one-of>
+      <item>metric</item>
+      <item>celsius</item>
+    </one-of>
+  </individual>
+  <individual name="imperial">
+    <one-of>
+      <item>fahrenheit</item>
+      <item>imperial</item>
+    </one-of>
+  </individual>
     
 
   <question speaker="user" predicate="temperature" type="wh_question">
     <one-of>
-      <item>what is the temperature</item>
-      <item>what's the temperature in <slot predicate="city_to_search"/></item>
-      <item>what's the temperature in <slot predicate="city_to_search"/> <slot predicate="country_to_search"/></item>
-      <item>what's the temperature in <slot predicate="country_to_search"/> <slot predicate="city_to_search"/></item>
+      <item>what is the temperature </item>      
+      <item>what is the temperature in <slot predicate="city_to_search"/></item>
+      <item>what is the temperature in <slot predicate="country_to_search"/></item>
+      <item>what is the temperature in <slot predicate="city_to_search"/> <slot predicate="country_to_search"/></item>
+      <item>what is the temperature in <slot predicate="country_to_search"/> <slot predicate="city_to_search"/></item>      
+      <item>what is the <slot predicate="unit"/> temperature in <slot predicate="city_to_search"/> <slot predicate="country_to_search"/></item>
+      <item>show the temperature in <slot predicate="unit"/></item>
     </one-of>
   </question>
 
   <question speaker="user" predicate="weather" type="wh_question">
     <one-of>
-      <item>what is the current weather</item>
-      <item>what's the weather in <slot predicate="city_to_search"/></item>
-      <item>what's the weather in <slot predicate="city_to_search"/> <slot predicate="country_to_search"/></item> 
+      <item>what is the weather</item>
+      <item>show the current weather</item>
+      <item>what is the weather in <slot predicate="city_to_search"/></item>
+      <item>what is the weather in <slot predicate="country_to_search"/></item>
+      <item>what is the weather in <slot predicate="city_to_search"/> <slot predicate="country_to_search"/></item>
+      <item>what is the weather in <slot predicate="city_to_search"/> <slot predicate="country_to_search"/></item> 
+      <item>what is the weather in <slot predicate="country_to_search"/> <slot predicate="city_to_search"/></item> 
     </one-of>
   </question>
 
 
   <question speaker="system" predicate="city_to_search" type="wh_question">
-      which city
-    </question>
+    what city
+  </question>
   
   <question speaker="system" predicate="country_to_search" type="wh_question">
-      which country
-    </question>
+    what country
+  </question>
 
-    
+  <question speaker="system" predicate="unit" type="wh_question">what unit</question>
+
+
+  <question speaker="all" predicate="temperature" type="wh_question">about the temperature</question>
+  <question speaker="all" predicate="weather" type="wh_question">the current weather</question>
+  
   <answer speaker="system" predicate="temperature"> The temperature is <slot predicate="temperature"/></answer>
-
   <answer speaker="system" predicate="weather">The weather is <slot predicate="weather"/></answer>
 
 </grammar>

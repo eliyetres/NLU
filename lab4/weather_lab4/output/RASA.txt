@@ -1,0 +1,97 @@
+
+-- not understanding thank you
+On line 76 of weather/test/interaction_tests_eng.txt,
+expected:
+  S> The temperature is *
+
+but got:
+  S> I heard you say England thank you. I don't understand. What country?
+
+----------------------------------------------------------
+
+On line 76 of weather/test/interaction_tests_eng.txt,
+expected:
+  S> The temperature is *
+
+but got:
+  S> I heard you say England thanks. I don't understand. What country?
+----------------------------------------------------------
+
+--- Not understanding misspellings
+S> What country?
+
+but got:
+  S> I heard you say Gottenburg. I don't understand. What city?
+
+----------------------------------------------------------
+
+--- not understanding please when asking questions
+  S> The temperature is *
+
+but got:
+  S> I heard you say London please. I don't understand. So, What city?
+
+----------------------------------------------------------
+
+--- tdm run eng
+S> Do you want to know about the temperature or know the current weather?
+
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What country?
+
+England thanks
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say England thanks. I don't understand. What country?
+
+England please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say England please. I don't understand. What country?
+
+please England
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> Uk.
+
+----------------------------------------------------------
+
+--- tests misspelling Gothenburg and using thank you.
+what is the temperature in farenheit
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What city?
+
+Gotemburg
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> You want to know about the temperature.
+
+S> What city?
+
+gothenburgg please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say gothenburgg please. I don't understand. What city?
+
+please gothenburg
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say please gothenburg. I don't understand. What city?
+
+¨gothenbirg
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> You want to know about the temperature.
+
+S> What city?
+
+gothenburg
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What country?
+
+thank you. sweden
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say thank you. sweden. I don't understand. What country?
+
+sweden. thank you
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say sweden. thank you. I don't understand. What country?
+
+sweden
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=farenheit&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '287', 'units:', 'farenheit')
+S> The temperature is 287.

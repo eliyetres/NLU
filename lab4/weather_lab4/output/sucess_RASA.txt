@@ -1,0 +1,90 @@
+(tdm) [gusihaliel@GU.GU.SE@eduserv weather_lab4]$ tdm build
+UserWarning: The support for RASA NLU is still in BETA. Talk gently. It is currently enabled in DDD 'weather'.
+Building generated grammar for DDD 'weather'.
+[eng] Cleaning build directory 'build/eng'...Done.
+[eng] Cleaning RASA build directory 'build_rasa/eng'...Done.
+[eng] Generating grammar.
+[eng] Asserting that language grammar is lower case...Done.
+[eng] Finished generating grammar.
+[eng] Building generated grammar.
+[eng] Finished building generated grammar.
+[eng] Generating model for RASA NLU.
+[eng] Finished generating model for RASA NLU.
+[eng] Training model for RASA NLU.
+DeprecationWarning: Importing from numpy.testing.nosetester is deprecated, import from numpy.testing instead.
+DeprecationWarning: Importing from numpy.testing.decorators is deprecated, import from numpy.testing instead.
+Fitting 2 folds for each of 6 candidates, totalling 12 fits
+UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:    1.2s finished
+[eng] Finished training model for RASA NLU.
+[eng] Not using word list correction, will not generate word list.
+[eng] No ASR specified, will not build language model.
+Finished building generated grammar for DDD 'weather'.
+(tdm) [gusihaliel@GU.GU.SE@eduserv weather_lab4]$ tdm test eng
+UserWarning: The support for RASA NLU is still in BETA. Talk gently. It is currently enabled in DDD 'weather'.
+DeprecationWarning: Importing from numpy.testing.nosetester is deprecated, import from numpy.testing instead.
+DeprecationWarning: Importing from numpy.testing.decorators is deprecated, import from numpy.testing instead.
+Running interactiontests from weather/test/interaction_tests_eng.txt
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with scattered clouds
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '9', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with few clouds
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with few clouds
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=imperial&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '55', 'units:', 'imperial')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=imperial&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '55', 'units:', 'imperial')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with few clouds
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+.
+----------------------------------------------------------------------
+Ran 16 tests in 5.348s
+
+OK

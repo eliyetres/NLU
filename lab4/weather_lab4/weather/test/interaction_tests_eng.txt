@@ -1,5 +1,5 @@
 --- main menu
-S> What would you like to do?
+S> Do you want to know about the temperature or know the current weather?
 
 --- city temperature
 U> what is the temperature
@@ -7,4 +7,82 @@ S> What city?
 U> London
 S> What country?
 U> UK
+S> The temperature is *
+
+--- city weather
+U> what is the weather
+S> What city?
+U> London
+S> What country?
+U> UK
+S> The weather is *
+
+--- country temperature sweden
+U> what is the temperature in Sweden
+S> What city?
+U> Gothenburg
+S> The temperature is *
+
+--- country temperature england
+U> what is the temperature in England
+S> What city?
+U> London
+S> The temperature is *
+
+--- city weather gothenburg
+U> what is the weather
+S> What city?
+U> Gothenburg
+S> What country?
+U> Sweden
+S> The weather is *
+
+--- one-shot request temperature england
+U> what is the temperature in London England
+S> The temperature is *
+
+--- one-shot request weather sweden
+U> what is the weather in Gothenburg Sweden
+S> The weather is *
+
+--- one-shot temperature england metric
+U> what is the metric temperature in London England
+S> The temperature is *
+
+--- one-shot temperature england imperial
+U> what is the imperial temperature in London England
+S> The temperature is *
+
+--- one-shot temperature england fahrenheit
+U> what is the fahrenheit temperature in London England
+S> The temperature is *
+
+--- one-shot temperature england imperial
+U> what is the celsius temperature in London England
+S> The temperature is *
+
+--- one-shot RASA
+U> what is the celsius temperature in London England please
+S> The temperature is *
+
+--- RASA test 1
+U> what is the weather please
+S> What city?
+U> Gothenburg
+S> What country?
+U> Sweden
+S> The weather is *
+
+--- RASA test 2
+U> what is the temperature in London please
+S> What country?
+U> England
+S> The temperature is *
+
+--- RASA test 3
+U> what is the temperature in England
+S> What city?
+U> London please
+S> London.
+U> yes
 S> The temperature is *

@@ -5,7 +5,7 @@
         "weather"
     ],
     "overrides": null,
-    "repeat_questions": true,
+    "repeat_questions": false,
     "rerank_amount": 0.2,
     "supported_languages": [
         "eng"

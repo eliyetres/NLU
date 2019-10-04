@@ -1,0 +1,106 @@
+hat an array is not empty.
+S> You want to know about the temperature.
+
+S> What city?
+
+Londin
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check t                                                  hat an array is not empty.
+S> You want to know about the temperature.
+
+S> What city?
+
+London please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check t                                                  hat an array is not empty.
+S> London.
+
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '13', 'units:', 'metric')
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with scattered clouds
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with scattered clouds
+S> The temperature is 13.
+
+S> Returning to the current weather.
+---------------------------------------------------------------------------
+S> Returning to main menu. Do you want to know about the temperature or know thecurrent weather?
+
+temperature in fahrenheit please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What city?
+
+London
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What country?
+
+England
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=imperial&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '55', 'units:', 'imperial')
+S> The temperature is 55.
+---------------------------------------------------------------------------
+The temperature in gothenburg please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What country?
+
+swiden
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> You want to know about the temperature.
+
+S> What country?
+
+sweeden
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> You want to know about the temperature.
+
+S> What country?
+
+swedenn
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> You want to know about the temperature.
+
+S> What country?
+
+sweden
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=Gothenburg,Sweden&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+('Temp: ', '9', 'units:', 'metric')
+S> The temperature is 9.
+----------------------------------------------------------------------------
+S> Returning to main menu. Do you want to know about the temperature or know the current weather?
+
+weather please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What city?
+
+gothenburg please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say gothenburg please. I don't understand. What city?
+----------------------------------------------------------------------------
+S> What city?
+
+gothenburg thanks
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say gothenburg thanks. I don't understand. What city?
+
+gothenburg, thanks
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say gothenburg, thanks. I don't understand. What city?
+----------------------------------------------------------------------------
+S> Returning to main menu. Do you want to know about the temperature or know the current weather?
+
+the current weather in london england thanks
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> What country?
+
+england please
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+S> I heard you say england please. I don't understand. What country?
+
+england
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+http://api.openweathermap.org/data/2.5/weather?q=London,UK&units=metric&APPID=378ff1bfe6cbfe897ddddf2bf5dbd60d
+Clouds with scattered clouds
+S> The weather is Clouds with scattered clouds.
+
+S> Returning to main menu. Do you want to know about the temperature or know the current weather?
