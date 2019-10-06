@@ -43,13 +43,11 @@
 	<individual name="greek">greek</individual>
 	<individual name="eastern_european">eastern european</individual>
 
-
 	<individual name="pescetarian">pescetarian</individual>
 	<individual name="lacto_vegetarian">lacto vegetarian</individual>
 	<individual name="ovo_vegetarian">ovo vegetarian</individual>
 	<individual name="vegan">vegan</individual>
 	<individual name="vegetarian">vegetarian</individual>
-
 
 	<individual name="dairy">dairy</individual>
 	<individual name="seafood">seafood</individual>
@@ -90,29 +88,64 @@
 
 
 <!-- User requests -->
-	<question speaker="user" predicate="recipe" type="wh_question">
-			<one-of>
-				<item>I need a recipe</item>
-				<item>I want a recipe </item>    
-			</one-of>
-		</question>
+
+<question speaker="user" predicate="detailed_recipe" type="wh_question">
+	<one-of>
+		<item>detailed recipe</item>
+		<item>I want a detailed recipe</item>
+<!-- burger -->
+		<item>I want a <slot predicate="query"/> </item>
+<!-- american burger -->
+		<item>I want a <slot predicate="cuisine_search"/> <slot predicate="query"/> </item>
+<!-- vegetarian burger -->
+		<item>I want a <slot predicate="diet_search"/>  <slot predicate="query"/> </item> 
+<!-- vegetarian american burger -->
+		<item>I want a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> <slot predicate="query"/> </item> 
+<!-- vegetarian american burger without tomato -->
+		<item>I want a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> <slot predicate="query"/> without <slot predicate="exclude_ingredients"/></item> 
+		<!-- dinner -->
+		<item>I want a recipe for<slot predicate="meal_type_search"/></item> 
+		<item>I want a <slot predicate="meal_type_search"/>recipe</item>  
+<!-- without ingredients -->
+		<item>I want something without <slot predicate="exclude_ingredients"/></item>   
+<!-- allergies -->
+		<item>I'm allergic to <slot predicate="intolerances_search"/></item> 
+	</one-of>
+</question>
+
+	<question speaker="user" predicate="simple_recipe" type="wh_question">
+	<one-of>
+		<item><slot predicate="query"/></item> 
+		<item><slot predicate="cuisine_search"/> <slot predicate="query"/></item> 
+		<item><slot predicate="query"/></item> 
+		<item><slot predicate="query"/></item> 
+		<item><slot predicate="diet_search"/> <slot predicate="query"/> </item> 
+		<item>any <slot predicate="meal_type_search"/> recipe</item>
+		<item>any <slot predicate="meal_type_search"/> recipe without <slot predicate="exclude_ingredients"/> </item>
+		
+	</one-of>
+	</question>
+
+
+
 
 <!-- Questions about parameters -->
 		<question speaker="system" predicate="query" type="wh_question">what kind of food</question>
 		<question speaker="system" predicate="meal_type_search" type="wh_question">what kind of meal you would like</question>
 		<question speaker="system" predicate="cuisine_search" type="wh_question">
-			what type of cuisine
+			what kind of cuisine, like italian or mexican
 		</question>		
 		<question speaker="system" predicate="diet_search" type="wh_question">
 			any specific diet, like vegan or vegetarian
 		</question>	
-		<question speaker="system" predicate="intolerances_search" type="wh_question">any intolerances</question>		
+		<question speaker="system" predicate="intolerances_search" type="wh_question">do you have any alleriges</question>		
 		<question speaker="system" predicate="exclude_ingredients" type="wh_question">do you want to exclude any ingredients</question>
 <!-- Starting question -->		
-		<question speaker="all" predicate="recipe" type="wh_question">what recipe are you looking for</question>
-		
+		<question speaker="all" predicate="simple_recipe" type="wh_question">simple recipe</question>
+		<question speaker="all" predicate="detailed_recipe" type="wh_question">detailed recipe</question>		
 <!-- Answer -->
-		<answer speaker="system" predicate="recipe"> The ingredients are<slot predicate="recipe"/></answer>
+		<answer speaker="system" predicate="simple_recipe"> The ingredients are<slot predicate="simple_recipe"/></answer>
+		<answer speaker="system" predicate="detailed_recipe"> The ingredients are<slot predicate="detailed_recipe"/></answer>
 
 
 </grammar>
