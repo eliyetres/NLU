@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="FoodDomain" is_super_domain="true">
+
+    <goal type="perform" action="top">
+        <plan>
+          <forget_all/>
+          <findout type="goal"/>
+        </plan>
+      </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="recipe">
+      <plan>
+          <findout type="wh_question" predicate="query"/>
+          <findout type="wh_question" predicate="meal_type_search"/>
+          <findout type="wh_question" predicate="cuisine_search"/>
+          <findout type="wh_question" predicate="diet_search"/>
+          <findout type="wh_question" predicate="intolerances_search"/>         
+          <bind type="wh_question" predicate="exclude_ingredients"/>
+          
+        <dev_query predicate="recipe" type="wh_question"/>
+      </plan>
+    </goal> 
+
+</domain>

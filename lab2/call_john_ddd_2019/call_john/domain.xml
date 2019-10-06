@@ -6,20 +6,6 @@
           <findout type="goal"/>
         </plan>
       </goal>
-    <!-- <goal type="perform" action="top">
-        <plan>
-          <forget_all/>
-          <findout type="alt_question">
-            <alt>
-              <resolve type="wh_question" predicate="phone_number_of_contact"/>
-            </alt>
-            <alt>
-                <perform action="make_call"/>
-              </alt>   
-            </findout>         
-        </plan>
-      </goal> -->
-
       
   <goal type="perform" action="make_call">
       <plan>

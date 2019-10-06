@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar>
+<!-- Menu -->
+	<action name="top">
+		<one-of>
+				<item>main menu</item>
+				<item>top</item>
+				<item>beginning</item>
+				<item>cancel</item>
+				<item>forget it</item>
+				<item>never mind</item>
+				<item>abort</item>
+		</one-of>
+	</action>
+
+	<action name="up">
+			<one-of>
+				<item>up</item>
+				<item>back</item>
+				<item>go back</item>
+			</one-of>
+		</action>
+
+	<individual name="african">african</individual>
+	<individual name="chinese">chinese</individual>
+	<individual name="japanese">japanese</individual>
+	<individual name="korean">korean</individual>
+	<individual name="vietnamese">vietnamese</individual>
+	<individual name="irish">irish</individual>
+	<individual name="indian">indian</individual>
+	<individual name="italian">italian</individual>
+	<individual name="middle_eastern">middle eastern</individual>
+	<individual name="american">american</individual>
+	<individual name="thai">thai</individual>
+	<individual name="nordic">nordic</individual>
+	<individual name="caribbean">caribbean</individual>
+	<individual name="latin_american">latin american</individual>
+	<individual name="french">french</individual>
+	<individual name="mexican">mexican</individual>
+	<individual name="spanish">spanish</individual>
+	<individual name="british">british</individual>
+	<individual name="german" >german</individual>
+	<individual name="greek">greek</individual>
+	<individual name="eastern_european">eastern european</individual>
+
+
+	<individual name="pescetarian">pescetarian</individual>
+	<individual name="lacto_vegetarian">lacto vegetarian</individual>
+	<individual name="ovo_vegetarian">ovo vegetarian</individual>
+	<individual name="vegan">vegan</individual>
+	<individual name="vegetarian">vegetarian</individual>
+
+
+	<individual name="dairy">dairy</individual>
+	<individual name="seafood">seafood</individual>
+	<individual name="shellfish">shellfish</individual>
+	<individual name="gluten">gluten</individual>
+	<individual name="wheat">wheat</individual>
+	<individual name="egg">    
+			<one-of>
+				<item>egg</item>
+				<item>eggs</item>  
+			</one-of>
+		</individual>
+	<individual name="peanut">
+			<one-of>
+				<item>peanut</item>
+				<item>peanuts</item>  
+			</one-of>
+		</individual>
+	<individual name="sesame">
+			<one-of>
+				<item>sesame</item>
+				<item>sesame seeds</item>  
+			</one-of>
+		</individual>
+	<individual name="soy">soy</individual>
+
+	<individual name="main_course">main course</individual>
+	<individual name="side_dish">side dish</individual>
+	<individual name="dessert">dessert</individual>
+	<individual name="appetizer">appetizer</individual>
+	<individual name="salad">salad</individual>
+	<individual name="bread">bread</individual>
+	<individual name="breakfast">breakfast</individual>
+	<individual name="soup">soup</individual>
+	<individual name="beverage">beverage</individual>
+	<individual name="sauce">sauce</individual>
+	<individual name="drink">drink</individual>
+
+
+<!-- User requests -->
+	<question speaker="user" predicate="recipe" type="wh_question">
+			<one-of>
+				<item>I need a recipe</item>
+				<item>I want a recipe </item>    
+			</one-of>
+		</question>
+
+<!-- Questions about parameters -->
+		<question speaker="system" predicate="query" type="wh_question">what kind of food</question>
+		<question speaker="system" predicate="meal_type_search" type="wh_question">what kind of meal you would like</question>
+		<question speaker="system" predicate="cuisine_search" type="wh_question">
+			what type of cuisine
+		</question>		
+		<question speaker="system" predicate="diet_search" type="wh_question">
+			any specific diet, like vegan or vegetarian
+		</question>	
+		<question speaker="system" predicate="intolerances_search" type="wh_question">any intolerances</question>		
+		<question speaker="system" predicate="exclude_ingredients" type="wh_question">do you want to exclude any ingredients</question>
+<!-- Starting question -->		
+		<question speaker="all" predicate="recipe" type="wh_question">what recipe are you looking for</question>
+		
+<!-- Answer -->
+		<answer speaker="system" predicate="recipe"> The ingredients are<slot predicate="recipe"/></answer>
+
+
+</grammar>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ontology name="FoodOntology">
+
+        <sort name="cuisine"/>
+        <sort name="diet"/>
+        <sort name="intolerances"/>
+        <sort name="meal_type"/>
+
+        <predicate name="query" sort="string"/>
+        <predicate name="recipe" sort="string"/>
+        <predicate name="cuisine_search" sort="cuisine"/>
+        <predicate name="diet_search" sort="diet"/>
+        <predicate name="intolerances_search" sort="intolerances"/>
+        <predicate name="meal_type_search" sort="meal_type"/> 
+        <predicate name="exclude_ingredients" sort="string"/>
+
+<!-- Cuisines -->
+        <individual name="african" sort="cuisine"/>
+        <individual name="chinese" sort="cuisine"/>
+        <individual name="japanese" sort="cuisine"/>
+        <individual name="korean" sort="cuisine"/>
+        <individual name="vietnamese" sort="cuisine"/>
+        <individual name="irish" sort="cuisine"/>
+        <individual name="indian" sort="cuisine"/>
+        <individual name="italian" sort="cuisine"/>
+        <individual name="middle_eastern" sort="cuisine"/>
+        <individual name="american" sort="cuisine"/>
+        <individual name="thai" sort="cuisine"/>
+        <individual name="nordic" sort="cuisine"/>
+        <individual name="caribbean" sort="cuisine"/>
+        <individual name="latin_american" sort="cuisine"/>
+        <individual name="french" sort="cuisine"/>
+        <individual name="mexican" sort="cuisine"/>
+        <individual name="spanish" sort="cuisine"/>
+        <individual name="british" sort="cuisine"/>
+        <individual name="german" sort="cuisine"/>
+        <individual name="greek" sort="cuisine"/>
+        <individual name="eastern_european" sort="cuisine"/>
+
+<!-- Diets -->
+        <individual name="pescetarian" sort="diet"/>
+        <individual name="lacto_vegetarian" sort="diet"/>
+        <individual name="ovo_vegetarian" sort="diet"/>
+        <individual name="vegan" sort="diet"/>
+        <individual name="vegetarian" sort="diet"/>
+
+<!-- Intolerances -->
+        <individual name="dairy" sort="intolerances"/>
+        <individual name="egg" sort="intolerances"/>
+        <individual name="gluten" sort="intolerances"/>
+        <individual name="peanut" sort="intolerances"/>
+        <individual name="sesame" sort="intolerances"/>
+        <individual name="seafood" sort="intolerances"/>
+        <individual name="shellfish" sort="intolerances"/>
+        <individual name="soy" sort="intolerances"/>
+        <individual name="wheat" sort="intolerances"/>
+
+<!-- Meal types -->
+        <individual name="main_course" sort="meal_type"/>
+        <individual name="side_dish" sort="meal_type"/>
+        <individual name="dessert" sort="meal_type"/>
+        <individual name="appetizer" sort="meal_type"/>
+        <individual name="salad" sort="meal_type"/>
+        <individual name="bread" sort="meal_type"/>
+        <individual name="breakfast" sort="meal_type"/>
+        <individual name="soup" sort="meal_type"/>
+        <individual name="beverage" sort="meal_type"/>
+        <individual name="sauce" sort="meal_type"/>
+        <individual name="drink" sort="meal_type"/>
+        
+</ontology>
