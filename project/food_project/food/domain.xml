@@ -24,7 +24,7 @@
 
     <goal type="resolve" question_type="wh_question" predicate="simple_recipe">
       <plan>
-          <findout type="wh_question" predicate="query"/>
+          <findout type="wh_question" predicate="query_search"/>
           <bind type="wh_question" predicate="meal_type_search"/>
           <bind type="wh_question" predicate="cuisine_search"/>
           <bind type="wh_question" predicate="diet_search"/>
@@ -37,13 +37,11 @@
 
   <goal type="resolve" question_type="wh_question" predicate="detailed_recipe">
       <plan>
-          <findout type="wh_question" predicate="query"/>
+          <findout type="wh_question" predicate="query_search"/>
           <findout type="wh_question" predicate="meal_type_search"/>
           <findout type="wh_question" predicate="cuisine_search"/>
           <findout type="wh_question" predicate="diet_search"/>
-          <findout type="wh_question" predicate="intolerances_search"/>         
-          <bind type="wh_question" predicate="exclude_ingredients"/>
-          
+          <findout type="wh_question" predicate="intolerances_search"/>                   
         <dev_query predicate="detailed_recipe" type="wh_question"/>
       </plan>
     </goal> 

@@ -6,9 +6,10 @@
 	<sort name="intolerances"/>
 	<sort name="meal_type"/>
 
-	<predicate name="query" sort="string"/>
+	
 	<predicate name="simple_recipe" sort="string"/>
 	<predicate name="detailed_recipe" sort="string"/>
+	<predicate name="query_search" sort="string"/>
 	<predicate name="cuisine_search" sort="cuisine"/>
 	<predicate name="diet_search" sort="diet"/>
 	<predicate name="intolerances_search" sort="intolerances"/>

@@ -17,11 +17,10 @@
 	<query name="detailed_recipe">
 		<parameters>
 				<parameter predicate="query_search" format="grammar_entry"/>
+				<parameter predicate="meal_type_search" format="grammar_entry"/>
 				<parameter predicate="cuisine_search" format="grammar_entry"/>
 				<parameter predicate="diet_search" format="grammar_entry"/>
-				<parameter predicate="intolerances_search" format="grammar_entry"/>
-				<parameter predicate="meal_type_search" format="grammar_entry"/>
-				<parameter predicate="exclude_ingredients" format="grammar_entry" default="None"/>                    
+				<parameter predicate="intolerances_search" format="grammar_entry"/>				                
 		</parameters>
 			<target>
 					<device_module device="FoodDevice"/>

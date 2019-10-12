@@ -1,2 +1,30 @@
 --- main menu
-S> What would you like to do?
+S> Do you want to know a simple recipe or know a detailed recipe?
+
+--- detailed recipe
+U> detailed recipe
+S> What do you feel like eating?
+U> burger
+S> What kind of meal, like main course or salad?
+U> main course
+S> A specific cuisine, like italian or mexican?
+U> american
+S> Any specific diet, like vegan or vegetarian?
+U> vegetarian
+S> Do you have any allergies?
+U> peanuts
+S> The ingredients are *
+
+--- detailed recipe
+U> detailed recipe
+S> What do you feel like eating?
+U> noodles
+S> What kind of meal, like main course or salad?
+U> salad
+S> A specific cuisine, like italian or mexican?
+U> korean
+S> Any specific diet, like vegan or vegetarian?
+U> vegetarian
+S> Do you have any allergies?
+U> soy
+S> The ingredients are *

@@ -1,0 +1,111 @@
+{
+    "results": [
+        {
+            "id": 521885,
+            "title": "Pesto & Mozzarella Turkey Burger",
+            "readyInMinutes": 20,
+            "servings": 6,
+            "image": "Pesto---Mozzarella-Turkey-Burger-521885.jpg",
+            "imageUrls": [
+                "Pesto---Mozzarella-Turkey-Burger-521885.jpg"
+            ]
+        },
+        {
+            "id": 573337,
+            "title": "Spicy Mango Black Bean Turkey Burgers",
+            "readyInMinutes": 45,
+            "servings": 6,
+            "image": "Spicy-Mango-Black-Bean-Turkey-Burgers-573337.jpg",
+            "imageUrls": [
+                "Spicy-Mango-Black-Bean-Turkey-Burgers-573337.jpg"
+            ]
+        },
+        {
+            "id": 210827,
+            "title": "Tangy tuna burgers",
+            "readyInMinutes": 25,
+            "servings": 2,
+            "image": "Tangy-tuna-burgers-210827.jpg",
+            "imageUrls": [
+                "Tangy-tuna-burgers-210827.jpg"
+            ]
+        },
+        {
+            "id": 46139,
+            "title": "Turkey Burgers With Cucumber-Pineapple Relish",
+            "readyInMinutes": 45,
+            "servings": 6,
+            "image": "turkey-burgers-with-cucumber-pineapple-relish-46139.jpg",
+            "imageUrls": [
+                "turkey-burgers-with-cucumber-pineapple-relish-46139.jpg"
+            ]
+        },
+        {
+            "id": 610905,
+            "title": "Jalapeno Bacon Turkey Burger",
+            "readyInMinutes": 15,
+            "servings": 4,
+            "image": "Jalapeno-Bacon-Turkey-Burger-610905.jpg",
+            "imageUrls": [
+                "Jalapeno-Bacon-Turkey-Burger-610905.jpg"
+            ]
+        },
+        {
+            "id": 210030,
+            "title": "Aussie burgers",
+            "readyInMinutes": 30,
+            "servings": 4,
+            "image": "Aussie-burgers-210030.jpg",
+            "imageUrls": [
+                "Aussie-burgers-210030.jpg"
+            ]
+        },
+        {
+            "id": 210825,
+            "title": "Caesar turkey burgers",
+            "readyInMinutes": 35,
+            "servings": 4,
+            "image": "Caesar-turkey-burgers-210825.jpg",
+            "imageUrls": [
+                "Caesar-turkey-burgers-210825.jpg"
+            ]
+        },
+        {
+            "id": 605709,
+            "title": "Grilled Orange & Fig Glazed Turkey Burgers with Creamed Feta #Turketarian",
+            "readyInMinutes": 25,
+            "servings": 4,
+            "image": "Grilled-Orange---Fig-Glazed-Turkey-Burgers-with-Creamed-Feta--Turketarian-605709.jpg",
+            "imageUrls": [
+                "Grilled-Orange---Fig-Glazed-Turkey-Burgers-with-Creamed-Feta--Turketarian-605709.jpg"
+            ]
+        },
+        {
+            "id": 222377,
+            "title": "Salmon & horseradish burgers",
+            "readyInMinutes": 28,
+            "servings": 4,
+            "image": "Salmon---horseradish-burgers-222377.jpg",
+            "imageUrls": [
+                "Salmon---horseradish-burgers-222377.jpg"
+            ]
+        },
+        {
+            "id": 611405,
+            "title": "Every Day Smothered Turkey Burgers (No Buns Required)",
+            "readyInMinutes": 30,
+            "servings": 4,
+            "image": "Every-Day-Smothered-Turkey-Burgers-(No-Buns-Required)-611405.jpg",
+            "imageUrls": [
+                "Every-Day-Smothered-Turkey-Burgers-(No-Buns-Required)-611405.jpg"
+            ]
+        }
+    ],
+    "baseUri": "https://spoonacular.com/recipeImages/",
+    "offset": 0,
+    "number": 10,
+    "totalResults": 22,
+    "processingTimeMs": 119,
+    "expires": 1571137073695,
+    "isStale": false
+}
