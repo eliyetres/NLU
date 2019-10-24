@@ -8,6 +8,16 @@ class FoodDevice(DddDevice):
     key = "94ef1f7a2b9941a1a9a315b35a7d5f40"
     def getRecipeData(self,query,cuisine,diet,meal_type,intolerances):
         print(query, cuisine,diet,meal_type,intolerances)
+        # fulhack
+        if cuisine == "no":
+            cuisine = None
+        if diet == "no":
+            diet = None
+        if meal_type == "no":
+            meal_type = None
+        if intolerances == "no":
+            intolerances = None
+        
         url = "https://api.spoonacular.com/recipes/search?apiKey={}".format(self.key)
         params = {
             "query": query,
@@ -37,7 +47,7 @@ class FoodDevice(DddDevice):
         def perform(self,query,cuisine,diet,meal_type,intolerances):
             recipe_data = self.device.getRecipeData(query,cuisine,diet,meal_type,intolerances)          
             # If response returns no recipes, return string
-            if len(recipe_data['results']) >= 0:
+            if len(recipe_data['results']) == 0:
                 return ["Sorry, no recipes found."]
 
             first_recipe = recipe_data['results'][0]
@@ -49,26 +59,31 @@ class FoodDevice(DddDevice):
             ingredients= ingredients_data['extendedIngredients']
             for i in range(len(ingredients)):
                 name = ingredients[i]['name']
-                amount = str(int(ingredients[i]['amount']))
+                
+                amount = ingredients[i]['amount']            
+                if (amount).is_integer(): # format into int without floating point if eg. 1.0 dl
+                    amount = str(int(amount))
+                else:
+                    amount= str(round(amount,1)) # if it's 1,5 dl, keep float
                 unit  = ingredients[i]['unit']
                 ing_str = amount+" "+unit+" "+name
                 print(ing_str)
                 ingredients_list.append(ing_str)
             ingredients_str = ', '.join(ingredients_list)
 
-            print("\n DETAILED RECIPE")
             print("------------------")
-            print("FIRST RECIPE")
-            print("------------------------------------------")
+            print("RECIPE")
+            print("------------------")
             print(first_recipe_title)
             print(ingredients_str)
 
+            result_string = "The recipe for {} are {}.".format(first_recipe_title, ingredients_str)
             #return [first_recipe_title, ingredients_str]
-            return [ingredients_str]
+            return [result_string]
 
-    class simple_recipe(DeviceWHQuery):
-        def perform(self,query,cuisine,diet,meal_type,intolerances):
-            recipe_data = self.device.getRecipeData(query,cuisine,diet,meal_type,intolerances)
+    #class simple_recipe(DeviceWHQuery):
+        #def perform(self,query,cuisine,diet,meal_type,intolerances):
+            #recipe_data = self.device.getRecipeData(query,cuisine,diet,meal_type,intolerances)
             # first_recipe_id = recipe_data.results[0].id
             # first_recipe_title = recipe_data.results[0].title
 
@@ -81,4 +96,4 @@ class FoodDevice(DddDevice):
             # ingredients_str = ', '.join(ingredients_list)
             
             # return [first_recipe_title, ingredients_str]
-            return ["test"]
+            #return ["test"]

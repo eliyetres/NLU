@@ -1,8 +1,8 @@
 --- main menu
-S> Do you want to know a simple recipe or know a detailed recipe?
+S> What would you like to do?
 
---- detailed recipe
-U> detailed recipe
+--- detailed recipe 1
+U> recipe
 S> What do you feel like eating?
 U> burger
 S> What kind of meal, like main course or salad?
@@ -13,10 +13,10 @@ S> Any specific diet, like vegan or vegetarian?
 U> vegetarian
 S> Do you have any allergies?
 U> peanuts
-S> The ingredients are *
+S> Ok, *
 
---- detailed recipe
-U> detailed recipe
+--- detailed recipe 2
+U> recipe
 S> What do you feel like eating?
 U> noodles
 S> What kind of meal, like main course or salad?
@@ -27,4 +27,33 @@ S> Any specific diet, like vegan or vegetarian?
 U> vegetarian
 S> Do you have any allergies?
 U> soy
-S> The ingredients are *
+S> Ok, *
+
+--- detailed recipe 3
+U> recipe
+S> What do you feel like eating?
+U> fried fish
+S> What kind of meal, like main course or salad?
+U> no
+S> A specific cuisine, like italian or mexican?
+U> spanish
+S> Any specific diet, like vegan or vegetarian?
+U> no
+S> Do you have any allergies?
+U> no
+S> Ok, *
+
+--- detailed recipe 4
+U> recipe
+S> What do you feel like eating?
+U> strawberry cake
+S> What kind of meal, like main course or salad?
+U> dessert
+S> A specific cuisine, like italian or mexican?
+U> no
+S> Any specific diet, like vegan or vegetarian?
+U> no
+S> Do you have any allergies?
+U> gluten
+S> Ok, *
+

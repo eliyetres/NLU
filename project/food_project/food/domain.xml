@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <domain name="FoodDomain" is_super_domain="true">
 
-    <!-- <goal type="perform" action="top">
+    <goal type="perform" action="top">
         <plan>
           <forget_all/>
           <findout type="goal"/>
         </plan>
+      </goal>
+
+
+    <!-- <goal type="perform" action="top">
+        <plan>
+          <forget_all/>
+          <findout type="alt_question">
+            <alt>
+              <resolve type="wh_question" predicate="simple_recipe"/>
+            </alt>
+            <alt>
+              <resolve type="wh_question" predicate="detailed_recipe"/>
+            </alt>
+          </findout>
+        </plan>
       </goal> -->
 
-    <goal type="perform" action="top">
-      <plan>
-        <forget_all/>
-        <findout type="alt_question">
-          <alt>
-            <resolve type="wh_question" predicate="simple_recipe"/>
-          </alt>
-          <alt>
-            <resolve type="wh_question" predicate="detailed_recipe"/>
-          </alt>
-        </findout>
-      </plan>
-    </goal>
-
-    <goal type="resolve" question_type="wh_question" predicate="simple_recipe">
+    <!-- <goal type="resolve" question_type="wh_question" predicate="simple_recipe">
       <plan>
           <findout type="wh_question" predicate="query_search"/>
           <bind type="wh_question" predicate="meal_type_search"/>
@@ -33,7 +34,7 @@
           
         <dev_query predicate="simple_recipe" type="wh_question"/>
       </plan>
-    </goal> 
+    </goal>  -->
 
   <goal type="resolve" question_type="wh_question" predicate="detailed_recipe">
       <plan>

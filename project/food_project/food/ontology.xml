@@ -5,9 +5,8 @@
 	<sort name="diet"/>
 	<sort name="intolerances"/>
 	<sort name="meal_type"/>
-
 	
-	<predicate name="simple_recipe" sort="string"/>
+	<!-- <predicate name="simple_recipe" sort="string"/> -->
 	<predicate name="detailed_recipe" sort="string"/>
 	<predicate name="query_search" sort="string"/>
 	<predicate name="cuisine_search" sort="cuisine"/>
@@ -17,6 +16,7 @@
 	<predicate name="exclude_ingredients" sort="string"/>
 
 <!-- Cuisines -->
+	<individual name="no_cuisine" sort="cuisine"/>
 	<individual name="african" sort="cuisine"/>
 	<individual name="chinese" sort="cuisine"/>
 	<individual name="japanese" sort="cuisine"/>
@@ -40,6 +40,7 @@
 	<individual name="eastern_european" sort="cuisine"/>
 
 <!-- Diets -->
+ 	<individual name="no_diet" sort="diet"/>
 	<individual name="pescetarian" sort="diet"/>
 	<individual name="lacto_vegetarian" sort="diet"/>
 	<individual name="ovo_vegetarian" sort="diet"/>
@@ -47,6 +48,7 @@
 	<individual name="vegetarian" sort="diet"/>
 
 <!-- Intolerances -->
+	<individual name="no_intolerances" sort="intolerances"/>
 	<individual name="dairy" sort="intolerances"/>
 	<individual name="egg" sort="intolerances"/>
 	<individual name="gluten" sort="intolerances"/>
@@ -58,6 +60,7 @@
 	<individual name="wheat" sort="intolerances"/>
 
 <!-- Meal types -->
+	<individual name="no_meal_type" sort="meal_type"/>
 	<individual name="main_course" sort="meal_type"/>
 	<individual name="side_dish" sort="meal_type"/>
 	<individual name="dessert" sort="meal_type"/>

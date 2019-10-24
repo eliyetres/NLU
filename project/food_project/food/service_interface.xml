@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
-	<query name="simple_recipe">
+	<!-- <query name="simple_recipe">
 		<parameters>
 				<parameter predicate="query_search" format="grammar_entry"/>
 				<parameter predicate="cuisine_search" format="grammar_entry" default="None"/>
@@ -12,7 +12,7 @@
 			<target>
 					<device_module device="FoodDevice"/>
 			</target>
-	</query>
+	</query> -->
 
 	<query name="detailed_recipe">
 		<parameters>

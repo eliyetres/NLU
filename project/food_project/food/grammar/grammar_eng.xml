@@ -51,7 +51,13 @@
 	<individual name="dairy">dairy</individual>
 	<individual name="seafood">seafood</individual>
 	<individual name="shellfish">shellfish</individual>
-	<individual name="gluten">gluten</individual>
+	<individual name="gluten">
+		<one-of>
+			<item>gluten</item>
+			<item>gluten free</item>
+			<item>gluten-free</item>
+		</one-of>
+	</individual>
 	<individual name="wheat">wheat</individual>
 	<individual name="egg">    
 			<one-of>
@@ -71,7 +77,13 @@
 				<item>sesame seeds</item>  
 			</one-of>
 		</individual>
-	<individual name="soy">soy</individual>
+	<individual name="soy">
+		<one-of>
+			<item>soy</item>
+			<item>soy sauce</item>  
+			<item>soy-sauce</item>  
+		</one-of>
+	</individual>
 
 	<individual name="main_course">main course</individual>
 	<individual name="side_dish">side dish</individual>
@@ -85,35 +97,48 @@
 	<individual name="sauce">sauce</individual>
 	<individual name="drink">drink</individual>
 
+	<individual name="no_meal_type">
+		<one-of>
+			<item>no</item>
+			<item>any meal</item>
+			<item>any</item>
+			<item>any type</item>
+			<item>whatever</item>
+		</one-of>
+	</individual>
+	<individual name="no_intolerances">no</individual>
+	<individual name="no_diet">no</individual>
+	<individual name="no_cuisine">no</individual>
+
 
 <!-- User requests -->
 
 <question speaker="user" predicate="detailed_recipe" type="wh_question">
 	<one-of>
-		<item>detailed recipe</item>	
-		<item>I want a <slot predicate="query_search"/></item>		
-		<item>I want a <slot predicate="cuisine_search"/> <slot predicate="query_search"/></item>
+		<item>recipe</item>		
+		<item>I want a recipe for <slot predicate="cuisine_search"/> <slot predicate="meal_type_search"/></item>	
+		<item>I want a <slot predicate="cuisine_search"/></item>
 		<item>I want a <slot predicate="diet_search"/> <slot predicate="query_search"/></item> 
-		<item>I want a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> <slot predicate="query_search"/></item>
+		<item>I want a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> </item>
 		<item>I want a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> without <slot predicate="exclude_ingredients"/></item>
 		<item>I want a recipe for <slot predicate="meal_type_search"/></item> 
 		<item>I want a <slot predicate="meal_type_search"/>recipe</item>
-		<item>I want something without <slot predicate="exclude_ingredients"/></item>   
+		<item>I want something without <slot predicate="exclude_ingredients"/></item>
+		<item>I want a <slot predicate="intolerances"/> recipe</item>
 		<item>I'm allergic to <slot predicate="intolerances_search"/></item> 
 	</one-of>
 </question>
 
-	<question speaker="user" predicate="simple_recipe" type="wh_question">
+	<!-- <question speaker="user" predicate="simple_recipe" type="wh_question">
 	<one-of>
 		<item>simple recipe</item>
-		<item><slot predicate="query_search"/></item> 
 		<item><slot predicate="cuisine_search"/> <slot predicate="query_search"/></item> 
 		<item><slot predicate="diet_search"/> <slot predicate="query_search"/> </item> 
 		<item>a <slot predicate="query_search"/> <slot predicate="meal_type_search"/> recipe</item>
 		<item>any <slot predicate="query_search"/> recipe without <slot predicate="exclude_ingredients"/></item>
 		<item>a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> <slot predicate="query_search"/></item>		
 	</one-of>
-	</question>
+	</question> -->
 
 <!-- Questions about parameters -->
 		<question speaker="system" predicate="query_search" type="wh_question">what do you feel like eating</question>
@@ -128,12 +153,12 @@
 		<question speaker="system" predicate="exclude_ingredients" type="wh_question">do you want to exclude any ingredients</question>
 
 <!-- Starting question -->		
-		<question speaker="all" predicate="simple_recipe" type="wh_question">a simple recipe</question>
+		<!-- <question speaker="all" predicate="simple_recipe" type="wh_question">a simple recipe</question> -->
 		<question speaker="all" predicate="detailed_recipe" type="wh_question">a detailed recipe</question>
 		
 <!-- Answer -->
-		<answer speaker="system" predicate="simple_recipe">The ingredients are <slot predicate="simple_recipe"/></answer>
-		<answer speaker="system" predicate="detailed_recipe">The ingredients are <slot predicate="detailed_recipe"/></answer>
+		<!-- <answer speaker="system" predicate="simple_recipe">The ingredients are <slot predicate="simple_recipe"/></answer> -->
+		<answer speaker="system" predicate="detailed_recipe"> Ok, <slot predicate="detailed_recipe"/></answer>
 
 
 </grammar>
