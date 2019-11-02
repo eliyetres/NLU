@@ -8,43 +8,33 @@
         </plan>
       </goal>
 
-
-    <!-- <goal type="perform" action="top">
-        <plan>
-          <forget_all/>
-          <findout type="alt_question">
-            <alt>
-              <resolve type="wh_question" predicate="simple_recipe"/>
-            </alt>
-            <alt>
-              <resolve type="wh_question" predicate="detailed_recipe"/>
-            </alt>
-          </findout>
-        </plan>
-      </goal> -->
-
-    <!-- <goal type="resolve" question_type="wh_question" predicate="simple_recipe">
-      <plan>
-          <findout type="wh_question" predicate="query_search"/>
-          <bind type="wh_question" predicate="meal_type_search"/>
-          <bind type="wh_question" predicate="cuisine_search"/>
-          <bind type="wh_question" predicate="diet_search"/>
-          <bind type="wh_question" predicate="intolerances_search"/>         
-          <bind type="wh_question" predicate="exclude_ingredients"/>
-          
-        <dev_query predicate="simple_recipe" type="wh_question"/>
-      </plan>
-    </goal>  -->
-
-  <goal type="resolve" question_type="wh_question" predicate="detailed_recipe">
+  <goal type="resolve" question_type="wh_question" predicate="recipe">
       <plan>
           <findout type="wh_question" predicate="query_search"/>
           <findout type="wh_question" predicate="meal_type_search"/>
           <findout type="wh_question" predicate="cuisine_search"/>
           <findout type="wh_question" predicate="diet_search"/>
-          <findout type="wh_question" predicate="intolerances_search"/>                   
-        <dev_query predicate="detailed_recipe" type="wh_question"/>
+          <findout type="wh_question" predicate="intolerances_search"/>   
+        <dev_query predicate="recipe" type="wh_question"/>
       </plan>
     </goal> 
+
+    <goal type="resolve" question_type="wh_question" predicate="ask_about_meal_type">
+        <plan>
+          <dev_query predicate="ask_about_meal_type" type="wh_question"/>
+        </plan>
+      </goal> 
+
+      <goal type="resolve" question_type="wh_question" predicate="ask_about_diet">
+          <plan>   
+            <dev_query predicate="ask_about_diet" type="wh_question"/>
+          </plan>
+        </goal> 
+
+        <goal type="resolve" question_type="wh_question" predicate="ask_about_intolerances">
+            <plan>
+              <dev_query predicate="ask_about_intolerances" type="wh_question"/>
+            </plan>
+          </goal> 
 
 </domain>

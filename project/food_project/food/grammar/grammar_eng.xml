@@ -28,10 +28,26 @@
 	<individual name="irish">irish</individual>
 	<individual name="indian">indian</individual>
 	<individual name="italian">italian</individual>
-	<individual name="middle_eastern">middle eastern</individual>
+	<individual name="middle_eastern">
+		<one-of>
+			<item>middle eastern</item>
+			<item>iranian</item>
+			<item>iraqi</item>
+			<item>lebanese</item>
+		</one-of>
+	</individual>
 	<individual name="american">american</individual>
 	<individual name="thai">thai</individual>
-	<individual name="nordic">nordic</individual>
+	<individual name="nordic">
+		<one-of>
+			<item>nordic</item>
+			<item>scandinavian</item>
+			<item>swedish</item>
+			<item>danish</item>
+			<item>norwegian</item>
+			<item>finnish</item>
+		</one-of>
+	</individual>
 	<individual name="caribbean">caribbean</individual>
 	<individual name="latin_american">latin american</individual>
 	<individual name="french">french</individual>
@@ -42,13 +58,26 @@
 	<individual name="greek">greek</individual>
 	<individual name="eastern_european">eastern european</individual>
 
-	<individual name="pescetarian">pescetarian</individual>
+	<individual name="pescatarian">pescatarian</individual>
 	<individual name="lacto_vegetarian">lacto vegetarian</individual>
-	<individual name="ovo_vegetarian">ovo vegetarian</individual>
+	<individual name="ovo_vegetarian">
+		<one-of>
+			<item>ovo vegetarian</item>
+		<item>lacto ovo vegetarian</item>
+	</one-of>
+	</individual>
 	<individual name="vegan">vegan</individual>
 	<individual name="vegetarian">vegetarian</individual>
 
-	<individual name="dairy">dairy</individual>
+	<individual name="dairy">
+		<one-of>
+			<item>dairy</item>
+			<item>milk</item>
+			<item>lactose</item>
+			<item>lactose free</item>
+			<item>lactose-free</item>
+		</one-of>
+	</individual>
 	<individual name="seafood">seafood</individual>
 	<individual name="shellfish">shellfish</individual>
 	<individual name="gluten">
@@ -104,6 +133,7 @@
 			<item>any</item>
 			<item>any type</item>
 			<item>whatever</item>
+			<item>any kind</item>
 		</one-of>
 	</individual>
 	<individual name="no_intolerances">no</individual>
@@ -113,32 +143,35 @@
 
 <!-- User requests -->
 
-<question speaker="user" predicate="detailed_recipe" type="wh_question">
+<question speaker="user" predicate="recipe" type="wh_question">
 	<one-of>
-		<item>recipe</item>		
-		<item>I want a recipe for <slot predicate="cuisine_search"/> <slot predicate="meal_type_search"/></item>	
-		<item>I want a <slot predicate="cuisine_search"/></item>
-		<item>I want a <slot predicate="diet_search"/> <slot predicate="query_search"/></item> 
-		<item>I want a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> </item>
-		<item>I want a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> without <slot predicate="exclude_ingredients"/></item>
-		<item>I want a recipe for <slot predicate="meal_type_search"/></item> 
+		<item>recipe</item>	
+		<item>I want a recipe</item>
+
+		<item>I want a <slot predicate="cuisine_search"/> recipe without <slot predicate="intolerances_search"/></item>
+		
+		<item>I want something without <slot predicate="intolerances_search"/></item>
+		<item>I want a <slot predicate="intolerances_search"/> recipe</item>
+		<item>I'm allergic to <slot predicate="intolerances_search"/></item>
 		<item>I want a <slot predicate="meal_type_search"/>recipe</item>
-		<item>I want something without <slot predicate="exclude_ingredients"/></item>
-		<item>I want a <slot predicate="intolerances"/> recipe</item>
-		<item>I'm allergic to <slot predicate="intolerances_search"/></item> 
+
+		<item>I want a recipe for <slot predicate="meal_type_search"/></item>
+		<item>I want a recipe for <slot predicate="cuisine_search"/> <slot predicate="meal_type_search"/></item>	
+		<item>I want a recipe for <slot predicate="cuisine_search"/><slot predicate="diet_search"/><slot predicate="meal_type_search"/></item>
+
+		<item>I want a recipe for <slot predicate="cuisine_search"/><slot predicate="diet_search"/><slot predicate="query_search"/></item>
+
+		<item>I want a recipe for <slot predicate="intolerances_search"/> <slot predicate="cuisine_search"/> <slot predicate="query_search"/></item>
+
+		<item>I want a recipe for <slot predicate="intolerances_search"/> <slot predicate="query_search"/></item>
+
+		<item>I want to eat <slot predicate="cuisine_search"/> <slot predicate="query_search"/></item>
+		
+
+	
+		
 	</one-of>
 </question>
-
-	<!-- <question speaker="user" predicate="simple_recipe" type="wh_question">
-	<one-of>
-		<item>simple recipe</item>
-		<item><slot predicate="cuisine_search"/> <slot predicate="query_search"/></item> 
-		<item><slot predicate="diet_search"/> <slot predicate="query_search"/> </item> 
-		<item>a <slot predicate="query_search"/> <slot predicate="meal_type_search"/> recipe</item>
-		<item>any <slot predicate="query_search"/> recipe without <slot predicate="exclude_ingredients"/></item>
-		<item>a <slot predicate="diet_search"/> <slot predicate="cuisine_search"/> <slot predicate="query_search"/></item>		
-	</one-of>
-	</question> -->
 
 <!-- Questions about parameters -->
 		<question speaker="system" predicate="query_search" type="wh_question">what do you feel like eating</question>
@@ -150,15 +183,53 @@
 			any specific diet, like vegan or vegetarian
 		</question>	
 		<question speaker="system" predicate="intolerances_search" type="wh_question">do you have any allergies</question>		
-		<question speaker="system" predicate="exclude_ingredients" type="wh_question">do you want to exclude any ingredients</question>
 
 <!-- Starting question -->		
 		<!-- <question speaker="all" predicate="simple_recipe" type="wh_question">a simple recipe</question> -->
-		<question speaker="all" predicate="detailed_recipe" type="wh_question">a detailed recipe</question>
+		<question speaker="all" predicate="recipe" type="wh_question">a recipe</question>
+		<question speaker="all" predicate="ask_about_diet" type="wh_question">ask about diet</question>
+		<question speaker="all" predicate="ask_about_meal_type" type="wh_question">ask about meal type</question>
+		<question speaker="all" predicate="ask_about_intolerances" type="wh_question">ask about intolerances</question>
+
 		
 <!-- Answer -->
 		<!-- <answer speaker="system" predicate="simple_recipe">The ingredients are <slot predicate="simple_recipe"/></answer> -->
-		<answer speaker="system" predicate="detailed_recipe"> Ok, <slot predicate="detailed_recipe"/></answer>
+		<answer speaker="system" predicate="recipe"> Ok, <slot predicate="recipe"/></answer>
 
+
+		<question speaker="user" predicate="ask_about_meal_type" type="wh_question">
+			<one-of>
+				<item>what are the meals</item>
+				<item>what kind of meal types</item>
+				<item>what meals</item>
+				<item>what meal</item>
+				<item>what meal type</item>
+				<item>what meal types</item>
+				</one-of>
+		</question>
+
+		<question speaker="user" predicate="ask_about_diet" type="wh_question">
+			<one-of>
+				<item>what are the diets</item>
+				<item>what diets</item>
+				<item>what diet</item>
+				<item>what kind of diets</item>
+				</one-of>
+			</question>
+
+			<question speaker="user" predicate="ask_about_intolerances" type="wh_question">
+				<one-of>
+					<item>what intolerances</item>
+					<item>what allergies</item>
+					<item>what kind of intolerances</item>
+					<item>what intolerances</item>
+				</one-of>
+			</question>
+	
+			<answer speaker="system" predicate="ask_about_meal_type"> Main course, side dish, dessert, appetizer, salad, break, breakfast, soup, beverage, sauce and drinks</answer>
+
+			<answer speaker="system" predicate="ask_about_diet">Pescatarian, lacto-vegetarian, ovo-vegetarian vegan or vegetarian</answer>
+
+			<answer speaker="system" predicate="ask_about_intolerances"> dairy, egg, gluten, peanuts, sesame, seafood, shellfish, soy or wheat</answer>
 
 </grammar>

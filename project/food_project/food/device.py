@@ -43,12 +43,12 @@ class FoodDevice(DddDevice):
         data = response.read()
         return json.loads(data)
 
-    class detailed_recipe(DeviceWHQuery):
+    class recipe(DeviceWHQuery):
         def perform(self,query,cuisine,diet,meal_type,intolerances):
             recipe_data = self.device.getRecipeData(query,cuisine,diet,meal_type,intolerances)          
             # If response returns no recipes, return string
             if len(recipe_data['results']) == 0:
-                return ["Sorry, no recipes found."]
+                return ["sorry, no recipes found"]
 
             first_recipe = recipe_data['results'][0]
             first_recipe_id = first_recipe['id']          
@@ -81,19 +81,15 @@ class FoodDevice(DddDevice):
             #return [first_recipe_title, ingredients_str]
             return [result_string]
 
-    #class simple_recipe(DeviceWHQuery):
-        #def perform(self,query,cuisine,diet,meal_type,intolerances):
-            #recipe_data = self.device.getRecipeData(query,cuisine,diet,meal_type,intolerances)
-            # first_recipe_id = recipe_data.results[0].id
-            # first_recipe_title = recipe_data.results[0].title
 
-            # ingredients_data = self.device.getIngredientsData(first_recipe_id)
-            # ingredients_list = []
-            # ingredients= ingredients_data.extendedIngredients
-            # for ing in ingredients:
-            #     print(ing)
-            #     ingredients_list.append(ing)
-            # ingredients_str = ', '.join(ingredients_list)
-            
-            # return [first_recipe_title, ingredients_str]
-            #return ["test"]
+    class ask_about_intolerances(DeviceWHQuery):
+        def perform(self):
+            return ["."]
+
+    class ask_about_meal_type(DeviceWHQuery):
+        def perform(self):
+            return ["."]
+
+    class ask_about_diet(DeviceWHQuery):
+        def perform(self):
+            return ["."]

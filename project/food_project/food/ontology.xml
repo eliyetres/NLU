@@ -5,15 +5,17 @@
 	<sort name="diet"/>
 	<sort name="intolerances"/>
 	<sort name="meal_type"/>
+
+	<predicate name="ask_about_meal_type" sort="string"/>
+	<predicate name="ask_about_diet" sort="string"/>
+	<predicate name="ask_about_intolerances" sort="string"/>
 	
-	<!-- <predicate name="simple_recipe" sort="string"/> -->
-	<predicate name="detailed_recipe" sort="string"/>
+	<predicate name="recipe" sort="string"/>
 	<predicate name="query_search" sort="string"/>
 	<predicate name="cuisine_search" sort="cuisine"/>
 	<predicate name="diet_search" sort="diet"/>
 	<predicate name="intolerances_search" sort="intolerances"/>
 	<predicate name="meal_type_search" sort="meal_type"/> 
-	<predicate name="exclude_ingredients" sort="string"/>
 
 <!-- Cuisines -->
 	<individual name="no_cuisine" sort="cuisine"/>
@@ -41,7 +43,7 @@
 
 <!-- Diets -->
  	<individual name="no_diet" sort="diet"/>
-	<individual name="pescetarian" sort="diet"/>
+	<individual name="pescatarian" sort="diet"/>
 	<individual name="lacto_vegetarian" sort="diet"/>
 	<individual name="ovo_vegetarian" sort="diet"/>
 	<individual name="vegan" sort="diet"/>

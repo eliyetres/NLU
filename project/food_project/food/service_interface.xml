@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
-	<!-- <query name="simple_recipe">
-		<parameters>
-				<parameter predicate="query_search" format="grammar_entry"/>
-				<parameter predicate="cuisine_search" format="grammar_entry" default="None"/>
-				<parameter predicate="diet_search" format="grammar_entry" default="None"/>
-				<parameter predicate="intolerances_search" format="grammar_entry" default="None"/>
-				<parameter predicate="meal_type_search" format="grammar_entry" default="None"/>
-				<parameter predicate="exclude_ingredients" format="grammar_entry" default="None"/>                    
-		</parameters>
-			<target>
-					<device_module device="FoodDevice"/>
-			</target>
-	</query> -->
-
-	<query name="detailed_recipe">
+	<query name="recipe">
 		<parameters>
 				<parameter predicate="query_search" format="grammar_entry"/>
 				<parameter predicate="meal_type_search" format="grammar_entry"/>
@@ -24,6 +10,31 @@
 		</parameters>
 			<target>
 					<device_module device="FoodDevice"/>
+			</target>
+	</query>
+
+
+	<query name="ask_about_meal_type">
+		<parameters>			
+		</parameters>
+			<target>
+				<device_module device="FoodDevice"/>
+			</target>
+	</query>
+
+	<query name="ask_about_diet">
+		<parameters>
+		</parameters>
+			<target>
+				<device_module device="FoodDevice"/>
+			</target>
+	</query>
+
+	<query name="ask_about_intolerances">
+		<parameters>		
+		</parameters>
+			<target>
+				<device_module device="FoodDevice"/>
 			</target>
 	</query>
 </service_interface>

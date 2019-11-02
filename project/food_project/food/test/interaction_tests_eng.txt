@@ -1,8 +1,8 @@
 --- main menu
 S> What would you like to do?
 
---- detailed recipe 1
-U> recipe
+--- american vegetarian burger [all slots filled]
+U> I want a recipe
 S> What do you feel like eating?
 U> burger
 S> What kind of meal, like main course or salad?
@@ -15,26 +15,12 @@ S> Do you have any allergies?
 U> peanuts
 S> Ok, *
 
---- detailed recipe 2
-U> recipe
-S> What do you feel like eating?
-U> noodles
-S> What kind of meal, like main course or salad?
-U> salad
-S> A specific cuisine, like italian or mexican?
-U> korean
-S> Any specific diet, like vegan or vegetarian?
-U> vegetarian
-S> Do you have any allergies?
-U> soy
-S> Ok, *
-
---- detailed recipe 3
+--- spanish fried fish, two words
 U> recipe
 S> What do you feel like eating?
 U> fried fish
 S> What kind of meal, like main course or salad?
-U> no
+U> any
 S> A specific cuisine, like italian or mexican?
 U> spanish
 S> Any specific diet, like vegan or vegetarian?
@@ -43,17 +29,30 @@ S> Do you have any allergies?
 U> no
 S> Ok, *
 
---- detailed recipe 4
-U> recipe
-S> What do you feel like eating?
-U> strawberry cake
+--- one-shot [cuisine] [diet] [query]
+U> I want a recipe for swedish vegan meatballs
 S> What kind of meal, like main course or salad?
-U> dessert
-S> A specific cuisine, like italian or mexican?
-U> no
-S> Any specific diet, like vegan or vegetarian?
-U> no
+U> Any
 S> Do you have any allergies?
-U> gluten
+U> No
 S> Ok, *
 
+--- one-shot [cuisine] [intolerances]
+U> I want a mexican recipe without eggs
+S> What do you feel like eating?
+U> tacos 
+S> What kind of meal, like main course or salad?
+U> Any
+S> Any specific diet, like vegan or vegetarian?
+U> No
+S> Ok, *
+
+--- one-shot [cuisine] [query]
+U> I want to eat british fish and chips
+S> What kind of meal, like main course or salad?
+U> Any kind
+S> Any specific diet, like vegan or vegetarian?
+U> No
+S> Do you have any allergies?
+U> No
+S> Ok, *

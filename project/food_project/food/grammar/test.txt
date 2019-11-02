@@ -1,0 +1,59 @@
+On line 71 of food/test/interaction_tests_eng.txt,
+expected:
+  S> The diets are pescetarian, lacto-vegetarian, ovo-vegetarian vegan and vegetarian
+
+but got:
+  S> The diets are pescetarian, lacto-vegetarian, ovo-vegetarian vegan and vegetarian.
+
+----------------------------------------------------------------------
+
+
+
+--- american vegetarian burger 1
+U> recipe
+S> What do you feel like eating?
+U> burger
+S> What kind of meal, like main course or salad?
+U> main course
+S> A specific cuisine, like italian or mexican?
+U> american
+S> Any specific diet, like vegan or vegetarian?
+U> vegetarian
+S> Do you have any allergies?
+U> peanuts
+S> Ok, *
+
+--- korean vegetarian noodles 2
+U> recipe
+S> What do you feel like eating?
+U> noodles
+S> What kind of meal, like main course or salad?
+U> salad
+S> A specific cuisine, like italian or mexican?
+U> korean
+S> Any specific diet, like vegan or vegetarian?
+U> vegetarian
+S> Do you have any allergies?
+U> soy
+S> Ok, *
+
+--- spanish fried fish, two words 3
+U> recipe
+S> What do you feel like eating?
+U> fried fish
+S> What kind of meal, like main course or salad?
+U> no
+S> A specific cuisine, like italian or mexican?
+U> spanish
+S> Any specific diet, like vegan or vegetarian?
+U> no
+S> Do you have any allergies?
+U> no
+S> Ok, *
+
+
+
+
+
+
+
